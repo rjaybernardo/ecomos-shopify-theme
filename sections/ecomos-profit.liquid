@@ -13,7 +13,19 @@
     }
   }
 {%- endstyle -%}
-
+<style>
+  .profit-gradient {
+    background: linear-gradient(90deg, #f4dca8 20.36%, #f5be66 26.39%, #ff8038 32.32%, #ff38bb 38.73%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: PP Neue Machina;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+</style>
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
@@ -51,7 +63,12 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                {{ block.settings.text }}
+                {%- if block.settings.text == blank -%}
+                  Our pages <span class="profit-gradient">help you sell</span>. They look good and sound great. More
+                  people will talk about it.
+                {%- else -%}
+                  {{ block.settings.text }}
+                {%- endif -%}
               </div>
             {%- when 'button' -%}
               <div
