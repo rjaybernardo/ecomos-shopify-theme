@@ -23,6 +23,17 @@
     align-items: center;
     height: 100%;
   }
+  span.os {
+    background: linear-gradient(90deg, #f4dca8 24.89%, #f5be66 29.2%, #ff8038 33.44%, #ff38bb 38.02%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: PP Neue Machina;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
 </style>
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
@@ -39,7 +50,13 @@
       data-cascade
     {% endif %}
   >
-    {%- unless section.settings.title == blank -%}
+    {%- if section.settings.title == blank -%}
+      <div class="title-wrapper-with-link  title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+        <h2 class="starter-title  inline-richtext {{ section.settings.heading_size }}">
+          ecom<span class="os">OS</span> is trusted by
+        </h2>
+      </div>
+    {%- else -%}
       <div class="title-wrapper-with-link  title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
         <h2 class="starter-title  inline-richtext {{ section.settings.heading_size }}">
           {{ section.settings.title }}
@@ -50,7 +67,8 @@
           </a>
         {%- endif -%}
       </div>
-    {%- endunless -%}
+    {%- endif -%}
+    <div class="center">Icon grid container here</div>
     <slider-component class="slider-mobile-gutter">
       <ul
         class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}"
@@ -387,7 +405,6 @@
         {
           "type": "inline_richtext",
           "id": "title",
-          "default": "Column",
           "label": "t:sections.multicolumn.blocks.column.settings.title.label"
         },
         {
