@@ -6,7 +6,7 @@
         "template--20870255509822__31d93f09-a1ac-4b04-a2a0-21251a4379b1-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "ecomOS is thefirst-of-its-kind AI Landing page framework",
+            "heading": "",
             "heading_size": "h1"
           }
         },
@@ -39,7 +39,9 @@
             "title": "You’re missing out on sales, because your site doesn’t convert...",
             "text": "<p>We have a better approach to writing copy and designing landing pages. If we can't out perform your existing page or website you don't pay.<br\/><br\/>How do we do it? We learn from your customers data and cross analyze against the competition and craft your perfect offer.<\/p><p><br\/>This way, your revenue per session increases while your CPA decreases.<\/p>",
             "link_label": "Get Started",
-            "link": ""
+            "link": "",
+            "button_label": "Click Me",
+            "button_link": ""
           }
         },
         "template--20870255509822__2eb92d52-4c96-4c77-80ee-6d7cbb60b1cd-column-2": {
@@ -49,7 +51,9 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "button_label": "Click Me",
+            "button_link": ""
           }
         }
       },
@@ -58,7 +62,7 @@
         "template--20870255509822__2eb92d52-4c96-4c77-80ee-6d7cbb60b1cd-column-2"
       ],
       "settings": {
-        "title": "ecomOS is trusted by",
+        "title": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
