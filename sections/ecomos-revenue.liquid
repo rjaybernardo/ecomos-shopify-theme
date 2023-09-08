@@ -13,6 +13,19 @@
     }
   }
 {%- endstyle -%}
+<style>
+  .revenue-gradient {
+    background: linear-gradient(90deg, #f4dca8 59.9%, #f5be66 66.33%, #ff8038 72.66%, #ff38bb 79.5%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: PP Neue Machina;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+</style>
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
@@ -51,7 +64,12 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                {{ block.settings.text }}
+                {%- if block.settings.text == blank -%}
+                  We can help you drop your new customer CPA by 30% or more. How? By using a high converting
+                  <span class="revenue-gradient">landing page</span>.
+                {%- else -%}
+                  {{ block.settings.text }}
+                {%- endif -%}
               </div>
             {%- when 'button' -%}
               <div
