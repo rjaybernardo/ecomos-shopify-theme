@@ -306,7 +306,7 @@
           "settings": {
             "heading": "What is the price?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected <\/p>",
             "page": ""
           }
         },
