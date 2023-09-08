@@ -1,28 +1,245 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "31d93f09-a1ac-4b04-a2a0-21251a4379b1": {
+      "type": "ecomos-banner",
       "blocks": {
-        "heading": {
+        "template--20870255509822__31d93f09-a1ac-4b04-a2a0-21251a4379b1-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "heading": "ecomOS is thefirst-of-its-kind AI Landing page framework",
+            "heading_size": "h1"
           }
         },
-        "text": {
+        "template--20870255509822__31d93f09-a1ac-4b04-a2a0-21251a4379b1-text-1": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "text": "<p>Boost conversion rate, increase AOV, and increase revenue in 90 days.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20870255509822__31d93f09-a1ac-4b04-a2a0-21251a4379b1-heading-1",
+        "template--20870255509822__31d93f09-a1ac-4b04-a2a0-21251a4379b1-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "2eb92d52-4c96-4c77-80ee-6d7cbb60b1cd": {
+      "type": "ecomos-starter",
+      "blocks": {
+        "template--20870255509822__2eb92d52-4c96-4c77-80ee-6d7cbb60b1cd-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "You’re missing out on sales, because your site doesn’t convert...",
+            "text": "<p>We have a better approach to writing copy and designing landing pages. If we can't out perform your existing page or website you don't pay.<br\/><br\/>How do we do it? We learn from your customers data and cross analyze against the competition and craft your perfect offer.<\/p><p><br\/>This way, your revenue per session increases while your CPA decreases.<\/p>",
+            "link_label": "Get Started",
+            "link": ""
           }
         },
-        "button": {
-          "type": "buttons",
+        "template--20870255509822__2eb92d52-4c96-4c77-80ee-6d7cbb60b1cd-column-2": {
+          "type": "column",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
+            "image": "shopify:\/\/shop_images\/center-placeholder.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20870255509822__2eb92d52-4c96-4c77-80ee-6d7cbb60b1cd-column-1",
+        "template--20870255509822__2eb92d52-4c96-4c77-80ee-6d7cbb60b1cd-column-2"
+      ],
+      "settings": {
+        "title": "ecomOS is trusted by",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "60fde35e-3da5-4dec-86b1-c4ecc46e29a1": {
+      "type": "ecomos-revenue",
+      "blocks": {
+        "44bb9d3e-5918-4356-99b5-e81de099b586": {
+          "type": "button",
+          "settings": {
+            "button_label": "OUR FRAMEWORKS",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "template--20870255509822__60fde35e-3da5-4dec-86b1-c4ecc46e29a1-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Maximize revenue for every website visitor.",
+            "heading_size": "h1"
+          }
+        },
+        "template--20870255509822__60fde35e-3da5-4dec-86b1-c4ecc46e29a1-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We can help you drop your new customer CPA by 30% or more. How? By using a high converting landing page.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "44bb9d3e-5918-4356-99b5-e81de099b586",
+        "template--20870255509822__60fde35e-3da5-4dec-86b1-c4ecc46e29a1-heading-1",
+        "template--20870255509822__60fde35e-3da5-4dec-86b1-c4ecc46e29a1-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "f51199d1-8c56-4bab-91b2-d6a4c9517e59": {
+      "type": "ecomos-pricing",
+      "blocks": {
+        "template--20870255509822__f51199d1-8c56-4bab-91b2-d6a4c9517e59-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Pricing",
+            "heading_size": "h1"
+          }
+        },
+        "template--20870255509822__f51199d1-8c56-4bab-91b2-d6a4c9517e59-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Choose a plan that’s right for you.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20870255509822__f51199d1-8c56-4bab-91b2-d6a4c9517e59-heading-1",
+        "template--20870255509822__f51199d1-8c56-4bab-91b2-d6a4c9517e59-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "4605c618-075d-4801-a64c-d94d59fa7eb0": {
+      "type": "ecomos-addon",
+      "blocks": {
+        "template--20870255509822__4605c618-075d-4801-a64c-d94d59fa7eb0-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "ADD-ON",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "template--20870255509822__4605c618-075d-4801-a64c-d94d59fa7eb0-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shopify development",
+            "heading_size": "h1"
+          }
+        },
+        "template--20870255509822__4605c618-075d-4801-a64c-d94d59fa7eb0-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We can develop your landing page natively into                . No apps, no lagging iFrames, no BS.<\/p>"
+          }
+        },
+        "67bc8f3d-80ce-4515-966c-3c3cec22ffd7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>$999<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20870255509822__4605c618-075d-4801-a64c-d94d59fa7eb0-button-1",
+        "template--20870255509822__4605c618-075d-4801-a64c-d94d59fa7eb0-heading-1",
+        "template--20870255509822__4605c618-075d-4801-a64c-d94d59fa7eb0-text-1",
+        "67bc8f3d-80ce-4515-966c-3c3cec22ffd7"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "22e78442-d625-44af-8b4c-f0d12aebd3e8": {
+      "type": "ecomos-works",
+      "blocks": {
+        "template--20870255509822__22e78442-d625-44af-8b4c-f0d12aebd3e8-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "How ecomOS works",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--20870255509822__22e78442-d625-44af-8b4c-f0d12aebd3e8-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "035c41db-7ed7-400d-9fd6-353677679294": {
+      "type": "ecomos-profit",
+      "blocks": {
+        "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Want more profit?",
+            "heading_size": "h1"
+          }
+        },
+        "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our pages help you sell. They look good and sound great. More people will talk about it.<\/p>"
+          }
+        },
+        "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -30,181 +247,144 @@
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-heading-1",
+        "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-text-1",
+        "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-button-1"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "inverse",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "color_scheme": "background-1",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_bottom": 52
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "show_view_all": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
+    "259c996b-3c26-476e-a411-e66f206b1c9e": {
+      "type": "ecomos-book",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
+        "template--20870255509822__259c996b-3c26-476e-a411-e66f206b1c9e-column-1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/calendar.png",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "template--20870255509822__259c996b-3c26-476e-a411-e66f206b1c9e-column-1"
       ],
       "settings": {
-        "title": "",
+        "title": "Book a free call today",
         "heading_size": "h1",
-        "image_width": "third",
+        "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "primary",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "background-1",
+        "color_scheme": "",
         "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "96034594-c6aa-4f94-8bd7-de27737dbc8f": {
+      "type": "ecomos-faqs",
+      "blocks": {
+        "template--20870255509822__96034594-c6aa-4f94-8bd7-de27737dbc8f-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the price?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--20870255509822__96034594-c6aa-4f94-8bd7-de27737dbc8f-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can you make a custom offer?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--20870255509822__96034594-c6aa-4f94-8bd7-de27737dbc8f-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What will be needed from me?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--20870255509822__96034594-c6aa-4f94-8bd7-de27737dbc8f-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I edit page afterwards?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "a5303c00-3945-48fe-b2d3-163f9339f3c8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What’s the lead time?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "dca4806b-e271-4c65-9f94-9a786b9ee613": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How will we communicate?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20870255509822__96034594-c6aa-4f94-8bd7-de27737dbc8f-collapsible_row-1",
+        "template--20870255509822__96034594-c6aa-4f94-8bd7-de27737dbc8f-collapsible_row-2",
+        "template--20870255509822__96034594-c6aa-4f94-8bd7-de27737dbc8f-collapsible_row-3",
+        "template--20870255509822__96034594-c6aa-4f94-8bd7-de27737dbc8f-collapsible_row-4",
+        "a5303c00-3945-48fe-b2d3-163f9339f3c8",
+        "dca4806b-e271-4c65-9f94-9a786b9ee613"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "31d93f09-a1ac-4b04-a2a0-21251a4379b1",
+    "2eb92d52-4c96-4c77-80ee-6d7cbb60b1cd",
+    "60fde35e-3da5-4dec-86b1-c4ecc46e29a1",
+    "f51199d1-8c56-4bab-91b2-d6a4c9517e59",
+    "4605c618-075d-4801-a64c-d94d59fa7eb0",
+    "22e78442-d625-44af-8b4c-f0d12aebd3e8",
+    "035c41db-7ed7-400d-9fd6-353677679294",
+    "259c996b-3c26-476e-a411-e66f206b1c9e",
+    "96034594-c6aa-4f94-8bd7-de27737dbc8f"
   ]
 }
