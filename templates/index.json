@@ -24,7 +24,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "accent-1",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -39,9 +39,9 @@
             "title": "You’re missing out on sales, because your site doesn’t convert...",
             "text": "<p>We have a better approach to writing copy and designing landing pages. If we can't out perform your existing page or website you don't pay.<br\/><br\/>How do we do it? We learn from your customers data and cross analyze against the competition and craft your perfect offer.<\/p><p><br\/>This way, your revenue per session increases while your CPA decreases.<\/p>",
             "link_label": "Get Started",
-            "link": "",
-            "button_label": "Click Me",
-            "button_link": ""
+            "link": "shopify:\/\/collections\/all",
+            "button_label": "Get Started!",
+            "button_link": "shopify:\/\/collections\/all"
           }
         },
         "template--20870255509822__2eb92d52-4c96-4c77-80ee-6d7cbb60b1cd-column-2": {
@@ -71,7 +71,7 @@
         "background_style": "primary",
         "button_label": "Get Started",
         "button_link": "",
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -102,7 +102,7 @@
         "template--20870255509822__60fde35e-3da5-4dec-86b1-c4ecc46e29a1-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>We can help you drop your new customer CPA by 30% or more. How? By using a high converting landing page.<\/p>"
+            "text": ""
           }
         }
       },
@@ -114,7 +114,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "accent-1",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -144,7 +144,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -174,7 +174,7 @@
         "template--20870255509822__4605c618-075d-4801-a64c-d94d59fa7eb0-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>We can develop your landing page natively into                . No apps, no lagging iFrames, no BS.<\/p>"
+            "text": ""
           }
         },
         "67bc8f3d-80ce-4515-966c-3c3cec22ffd7": {
@@ -193,7 +193,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -205,7 +205,7 @@
         "template--20870255509822__22e78442-d625-44af-8b4c-f0d12aebd3e8-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "How ecomOS works",
+            "heading": "",
             "heading_size": "h1"
           }
         }
@@ -216,7 +216,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "accent-1",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -235,7 +235,7 @@
         "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Our pages help you sell. They look good and sound great. More people will talk about it.<\/p>"
+            "text": ""
           }
         },
         "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-button-1": {
@@ -258,7 +258,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -291,7 +291,7 @@
         "background_style": "primary",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "",
+        "color_scheme": "accent-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -370,7 +370,7 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
-        "color_scheme": "",
+        "color_scheme": "accent-1",
         "container_color_scheme": "",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
