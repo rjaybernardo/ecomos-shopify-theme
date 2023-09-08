@@ -13,7 +13,19 @@
     }
   }
 {%- endstyle -%}
-
+<style>
+  .works-gradient {
+    background: linear-gradient(90deg, #f4dca8 52.21%, #f5be66 55.6%, #ff8038 58.94%, #ff38bb 62.55%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: PP Neue Machina;
+    font-size: 62px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+</style>
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
@@ -29,7 +41,11 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                {{ block.settings.heading }}
+                {%- if block.settings.heading == blank -%}
+                  How ecom<span class="works-gradient">OS</span> works.
+                {%- else -%}
+                  {{ block.settings.heading }}
+                {%- endif -%}
               </h2>
             {%- when 'caption' -%}
               <p
