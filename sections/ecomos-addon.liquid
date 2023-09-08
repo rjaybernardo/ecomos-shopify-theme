@@ -13,7 +13,22 @@
     }
   }
 {%- endstyle -%}
-
+<style>
+  span.add0n-shopify-icon svg {
+    vertical-align: middle;
+  }
+  .addon-gradient {
+    background: linear-gradient(90deg, #f4dca8 61.67%, #f5be66 73.87%, #ff8038 85.88%, #ff38bb 98.85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: PP Neue Machina;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 22px;
+  }
+</style>
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
@@ -51,7 +66,13 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                {{ block.settings.text }}
+                {%- if block.settings.text == blank -%}
+                  We can develop your landing page natively into
+                  <span class="add0n-shopify-icon">{% render 'icon-shopify' %}</span>
+                  . <span class="addon-gradient">No apps, no lagging iFrames, no BS</span>.
+                {%- else -%}
+                  {{ block.settings.text }}
+                {%- endif -%}
               </div>
             {%- when 'button' -%}
               <div
