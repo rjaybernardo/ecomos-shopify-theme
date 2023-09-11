@@ -657,6 +657,12 @@ summary .icon-caret {
   right: 1.5rem;
   top: calc(50% - 0.2rem);
 }
+summary .icon-plus-faq {
+  position: absolute;
+  height: 16px;
+  right: 1.5rem;
+  top: calc(50% - 8px);
+}
 
 summary::-webkit-details-marker {
   display: none;
