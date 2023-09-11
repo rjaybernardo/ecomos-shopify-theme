@@ -26,6 +26,39 @@
     }
   }
 {%- endstyle -%}
+<style>
+  span.underline-text {
+    text-decoration: underline;
+  }
+  .ecomos-footer {
+    padding: 0;
+  }
+  .footer-header h2 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    margin: 0 !important;
+  }
+  .footer-subheader p {
+    color: #bababa;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    max-width: 540px;
+  }
+  .copyright__content {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .footer--button {
+    margin: 40px 0 50px;
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.3);
+  }
+</style>
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
@@ -248,7 +281,7 @@
   {%- endif -%}
 
   <div
-    class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class="ecomos-footer footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
@@ -350,11 +383,35 @@
       </div>
     </div>
     <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
+      <div class="footer-header center">
+        <h2>{{ section.settings.footer_header }}</h2>
+      </div>
+      <div class="footer-subheader center">
+        {% if section.settings.footer_subheader == blank %}
+          <p>
+            Watch a real-time breakdown of a landing page with our founder
+            <span class="underline-text">Ethan Field</span>.
+          </p>
+        {% else %}
+          <p>{{ section.settings.footer_subheader }}</p>
+        {% endif %}
+      </div>
+      <a
+        class="footer--button button button--primary"
+        {% if block.settings.button_link == blank %}
+          role="link" aria-disabled="true"
+        {% else %}
+          href="{{ section.settings.button_link }}"
+        {% endif %}
+      >
+        {{ section.settings.button_label | escape }}
+      </a>
       <div class="footer__copyright caption">
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+          | Made with ❤️ in Dubai.
         </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
+
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
@@ -491,6 +548,28 @@
       "type": "header",
       "content": "t:sections.footer.settings.header__1.content",
       "info": "t:sections.footer.settings.header__1.info"
+    },
+    {
+      "type": "text",
+      "id": "footer_header",
+      "label": "Footer Header",
+      "default": "Watch a Demo Audit"
+    },
+    {
+      "type": "richtext",
+      "id": "footer_subheader",
+      "label": "Footer Sub Header"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Watch Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
     },
     {
       "type": "checkbox",
