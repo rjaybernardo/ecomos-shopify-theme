@@ -16,6 +16,8 @@
 {%- endstyle -%}
 <style>
   .starter-title {
+    font-size: 24px;
+    line-height: 140%;
     margin: 0 auto;
   }
   .starter-card-container {
@@ -28,11 +30,29 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: PP Neue Machina;
     font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 140%;
+  }
+  .starter-title-wrapper-with-link {
+    margin-bottom: 30px;
+  }
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 610px;
+    margin: 0 auto;
+  }
+  .starter-grid-logo {
+    position: relative;
+    width: 150px;
+    height: auto;
+    overflow: hidden;
+  }
+  .starter-grid-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 </style>
 {%- liquid
@@ -51,13 +71,13 @@
     {% endif %}
   >
     {%- if section.settings.title == blank -%}
-      <div class="title-wrapper-with-link  title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+      <div class="starter-title-wrapper-with-link title-wrapper-with-link  title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
         <h2 class="starter-title  inline-richtext {{ section.settings.heading_size }}">
           ecom<span class="os">OS</span> is trusted by
         </h2>
       </div>
     {%- else -%}
-      <div class="title-wrapper-with-link  title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+      <div class="starter-title-wrapper-with-link title-wrapper-with-link  title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
         <h2 class="starter-title  inline-richtext {{ section.settings.heading_size }}">
           {{ section.settings.title }}
         </h2>
@@ -68,7 +88,25 @@
         {%- endif -%}
       </div>
     {%- endif -%}
-    <div class="center">Icon grid container here</div>
+    <div class="center">
+      <div class="center starter-grid">
+        {% for i in (1..8) %}
+          {% assign logo_id = 'grid_logo_' | append: i %}
+          {% if section.settings[logo_id] %}
+            <div class="starter-grid-logo">
+              <img
+                src="{{ section.settings[logo_id] | image_url }}"
+                alt="Logo {{ i }} "
+                height="auto"
+                width="auto"
+                loading="lazy"
+              >
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
     <slider-component class="slider-mobile-gutter">
       <ul
         class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}"
@@ -238,6 +276,46 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "grid_logo_1",
+      "label": "Logo 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "grid_logo_2",
+      "label": "Logo 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "grid_logo_3",
+      "label": "Logo 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "grid_logo_4",
+      "label": "Logo 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "grid_logo_5",
+      "label": "Logo 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "grid_logo_6",
+      "label": "Logo 6"
+    },
+    {
+      "type": "image_picker",
+      "id": "grid_logo_7",
+      "label": "Logo 7"
+    },
+    {
+      "type": "image_picker",
+      "id": "grid_logo_8",
+      "label": "Logo 8"
     },
     {
       "type": "select",
@@ -433,6 +511,17 @@
           "type": "url",
           "id": "button_link",
           "label": "Button Link"
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "name": "Logo Grid",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "grid_image",
+          "label": "Logo Brands"
         }
       ]
     }
