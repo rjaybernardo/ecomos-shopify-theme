@@ -14,16 +14,24 @@
   }
 {%- endstyle -%}
 <style>
+  .works-header {
+    font-size: 62px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
   .works-gradient {
     background: linear-gradient(90deg, #f4dca8 52.21%, #f5be66 55.6%, #ff8038 58.94%, #ff38bb 62.55%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: PP Neue Machina;
     font-size: 62px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+  .works-box-container {
+    border: 1px solid white;
   }
 </style>
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
@@ -34,7 +42,7 @@
           {%- case block.type -%}
             {%- when 'heading' -%}
               <h2
-                class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="works-header rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -107,6 +115,7 @@
         {%- endfor -%}
       </div>
     </div>
+    <div class="works-box-container page-width"><h1>Box animation here...</h1></div>
   </div>
 </div>
 
