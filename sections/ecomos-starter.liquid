@@ -41,6 +41,7 @@
     grid-template-columns: repeat(4, 1fr);
     max-width: 610px;
     margin: 0 auto;
+    margin-bottom: 60px;
   }
   .starter-grid-logo {
     position: relative;
@@ -53,6 +54,16 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+  }
+  .starter-header {
+    font-size: 26px;
+    line-height: 140%;
+    margin-bottom: 30px !important;
+  }
+  .starter-text {
+    font-size: 18px;
+    line-height: 140%;
+    color: #fff;
   }
 </style>
 {%- liquid
@@ -88,23 +99,21 @@
         {%- endif -%}
       </div>
     {%- endif -%}
-    <div class="center">
-      <div class="center starter-grid">
-        {% for i in (1..8) %}
-          {% assign logo_id = 'grid_logo_' | append: i %}
-          {% if section.settings[logo_id] %}
-            <div class="starter-grid-logo">
-              <img
-                src="{{ section.settings[logo_id] | image_url }}"
-                alt="Logo {{ i }} "
-                height="auto"
-                width="auto"
-                loading="lazy"
-              >
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
+    <div class="center starter-grid">
+      {% for i in (1..8) %}
+        {% assign logo_id = 'grid_logo_' | append: i %}
+        {% if section.settings[logo_id] %}
+          <div class="starter-grid-logo">
+            <img
+              src="{{ section.settings[logo_id] | image_url }}"
+              alt="Logo {{ i }} "
+              height="auto"
+              width="auto"
+              loading="lazy"
+            >
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
 
     <slider-component class="slider-mobile-gutter">
@@ -188,10 +197,10 @@
               <div class="starter-card-container">
                 <div class="multicolumn-card__info">
                   {%- if block.settings.title != blank -%}
-                    <h3 class="inline-richtext">{{ block.settings.title }}</h3>
+                    <h3 class="starter-header inline-richtext">{{ block.settings.title }}</h3>
                   {%- endif -%}
                   {%- if block.settings.text != blank -%}
-                    <div class="rte">{{ block.settings.text }}</div>
+                    <div class="starter-text rte">{{ block.settings.text }}</div>
                   {%- endif -%}
                   {%- if block.settings.button_label != blank -%}
                     <a
