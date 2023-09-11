@@ -194,6 +194,7 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "accent-1",
+        "bg_color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
