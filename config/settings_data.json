@@ -11,7 +11,7 @@
     "spacing_grid_vertical": 8,
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
-    "buttons_radius": 8,
+    "buttons_radius": 4,
     "buttons_shadow_opacity": 0,
     "buttons_shadow_horizontal_offset": 0,
     "buttons_shadow_vertical_offset": 4,
@@ -157,7 +157,7 @@
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#797af2",
-          "button_label": "#fff",
+          "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
