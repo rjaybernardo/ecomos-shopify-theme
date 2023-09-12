@@ -245,6 +245,10 @@
     {%- unless settings.type_header_font.system? -%}
       <link rel="preload_tag" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="{{ 'swiper.min.css' | asset_url }}">
+    <!-- Swiper JS (preferably before closing body tag) -->
+    <script src="{{ 'swiper.min.js' | asset_url }}" defer="defer"></script>
 
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
       {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
