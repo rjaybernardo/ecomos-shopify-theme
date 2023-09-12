@@ -24,6 +24,11 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
+        "carousel_image_1": "shopify:\/\/shop_images\/seen.png",
+        "carousel_image_2": "shopify:\/\/shop_images\/livebeard.png",
+        "carousel_image_3": "shopify:\/\/shop_images\/kayani.png",
+        "carousel_image_4": "shopify:\/\/shop_images\/bullstrap.png",
+        "carousel_image_5": "shopify:\/\/shop_images\/avalon.png",
         "color_scheme": "accent-1",
         "full_width": true,
         "padding_top": 40,
