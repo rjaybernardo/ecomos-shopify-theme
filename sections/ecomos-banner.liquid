@@ -1,15 +1,14 @@
+{{ 'swiper.min.css' | asset_url | stylesheet_tag: preload: true }}
 {{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
 {%- endstyle -%}
@@ -24,6 +23,9 @@
     font-size: 20px;
     line-height: 30px;
   }
+  .banner-subheader {
+    margin-bottom: 100px !important;
+  }
   span.banner-os {
     background: linear-gradient(90deg, #f4dca8 43.26%, #f5be66 46.51%, #ff8038 49.72%, #ff38bb 53.17%);
     background-clip: text;
@@ -33,6 +35,30 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+  .carousel {
+    height: 300px;
+  }
+  .swiper {
+    width: 80%;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    {% comment %} border: 1px solid white; {% endcomment %}
+    display: flex;
+    justify-content: center;
+    height: 300px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0002, #0004);
   }
 </style>
 
@@ -82,7 +108,7 @@
               </p>
             {%- when 'text' -%}
               <div
-                class="rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="banner-subheader rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -129,11 +155,106 @@
         {%- endfor -%}
       </div>
     </div>
-    <div class="carousel page-width">
-      <h1>Carousel here.....</h1>
+    <div class="carousel swiper mySwiper page-width">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            {% if section.settings.carousel_image_1 != blank %}
+              src="{{ section.settings.carousel_image_1 | image_url }}"
+            {% else %}
+              src="{{ 'placeholder.svg' | asset_url }}"
+            {% endif %}
+            alt="Custom Image"
+            class="responsive-image"
+            width="250"
+            height="300"
+            loading="lazy"
+          >
+        </div>
+        <div class="swiper-slide">
+          <img
+            {% if section.settings.carousel_image_2 != blank %}
+              src="{{ section.settings.carousel_image_2 | image_url }}"
+            {% else %}
+              src="{{ 'placeholder.svg' | asset_url }}"
+            {% endif %}
+            alt="Custom Image"
+            class="responsive-image"
+            width="250"
+            height="300"
+            loading="lazy"
+          >
+        </div>
+        <div class="swiper-slide">
+          <img
+            {% if section.settings.carousel_image_3 != blank %}
+              src="{{ section.settings.carousel_image_3 | image_url }}"
+            {% else %}
+              src="{{ 'placeholder.svg' | asset_url }}"
+            {% endif %}
+            alt="Custom Image"
+            class="responsive-image"
+            width="250"
+            height="300"
+            loading="lazy"
+          >
+        </div>
+        <div class="swiper-slide">
+          <img
+            {% if section.settings.carousel_image_4 != blank %}
+              src="{{ section.settings.carousel_image_4 | image_url }}"
+            {% else %}
+              src="{{ 'placeholder.svg' | asset_url }}"
+            {% endif %}
+            alt="Custom Image"
+            class="responsive-image"
+            width="250"
+            height="300"
+            loading="lazy"
+          >
+        </div>
+        <div class="swiper-slide">
+          <img
+            {% if section.settings.carousel_image_5 != blank %}
+              src="{{ section.settings.carousel_image_5 | image_url }}"
+            {% else %}
+              src="{{ 'placeholder.svg' | asset_url }}"
+            {% endif %}
+            alt="Custom Image"
+            class="responsive-image"
+            width="250"
+            height="300"
+            loading="lazy"
+          >
+        </div>
+      </div>
     </div>
   </div>
 </div>
+<script src="{{ 'swiper.min.js' | asset_url }}" defer></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function (event) {
+    var swiper = new Swiper('.mySwiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 15,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: true,
+      },
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+    });
+  });
+</script>
 
 {% schema %}
 {
@@ -184,6 +305,31 @@
       ],
       "default": "center",
       "label": "t:sections.rich-text.settings.content_alignment.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "carousel_image_1",
+      "label": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "carousel_image_2",
+      "label": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "carousel_image_3",
+      "label": "Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "carousel_image_4",
+      "label": "Image 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "carousel_image_5",
+      "label": "Image 5"
     },
     {
       "type": "color_scheme",
@@ -361,6 +507,18 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_2.label"
+        }
+      ]
+    },
+    {
+      "type": "slide",
+      "name": "Slide",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Slide Image"
         }
       ]
     }
