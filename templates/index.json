@@ -69,6 +69,14 @@
       "settings": {
         "title": "",
         "heading_size": "h1",
+        "grid_logo_1": "shopify:\/\/shop_images\/download_1.svg",
+        "grid_logo_2": "shopify:\/\/shop_images\/SEENlogo_white_1.png",
+        "grid_logo_3": "shopify:\/\/shop_images\/logo_kayani.png",
+        "grid_logo_4": "shopify:\/\/shop_images\/avalonking-logo-type_1.svg",
+        "grid_logo_5": "shopify:\/\/shop_images\/bullstrap-logo1_1.png",
+        "grid_logo_6": "shopify:\/\/shop_images\/logo-web-blue-4.png",
+        "grid_logo_7": "shopify:\/\/shop_images\/noble.png",
+        "grid_logo_8": "shopify:\/\/shop_images\/Frame_4.png",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 2,
@@ -79,8 +87,8 @@
         "color_scheme": "inverse",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 80,
+        "padding_bottom": 100
       }
     },
     "60fde35e-3da5-4dec-86b1-c4ecc46e29a1": {
@@ -121,8 +129,8 @@
         "content_alignment": "center",
         "color_scheme": "accent-1",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "f51199d1-8c56-4bab-91b2-d6a4c9517e59": {
@@ -151,7 +159,7 @@
         "content_alignment": "center",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 100,
         "padding_bottom": 0
       }
     },
@@ -202,7 +210,7 @@
         "bg_color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 100
       }
     },
     "22e78442-d625-44af-8b4c-f0d12aebd3e8": {
@@ -224,8 +232,8 @@
         "content_alignment": "center",
         "color_scheme": "accent-1",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "035c41db-7ed7-400d-9fd6-353677679294": {
@@ -266,8 +274,8 @@
         "content_alignment": "center",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 100,
+        "padding_bottom": 80
       }
     },
     "259c996b-3c26-476e-a411-e66f206b1c9e": {
@@ -302,8 +310,8 @@
         "color_scheme": "accent-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 100,
+        "padding_bottom": 0
       }
     },
     "96034594-c6aa-4f94-8bd7-de27737dbc8f": {
@@ -383,8 +391,8 @@
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
