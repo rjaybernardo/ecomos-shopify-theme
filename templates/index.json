@@ -147,7 +147,7 @@
         "color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 0
       }
     },
     "4605c618-075d-4801-a64c-d94d59fa7eb0": {
@@ -283,6 +283,8 @@
         "template--20870255509822__259c996b-3c26-476e-a411-e66f206b1c9e-column-1"
       ],
       "settings": {
+        "top_background_color": "#1d1d1d",
+        "bottom_background_color": "#090909",
         "title": "Book a free call today",
         "heading_size": "h1",
         "image_width": "full",
