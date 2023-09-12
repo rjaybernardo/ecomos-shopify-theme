@@ -1,12 +1,13 @@
 {{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
-<link
+{{ 'swiper.min.css' | asset_url | stylesheet_tag }}
+
+{% comment %}
+  <link
   as="style"
   crossorigin
   href="{{ 'swiper.min.css' | asset_url }}"
-  rel="stylesheet preload"
->
-{% comment %} {{ 'swiper.min.css' | asset_url | stylesheet_tag: preload: true }} {% endcomment %}
-
+  rel="stylesheet preload">
+{% endcomment %}
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -237,7 +238,7 @@
     </div>
   </div>
 </div>
-<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer></script>
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function (event) {
