@@ -19,6 +19,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 30px !important;
   }
   .works-gradient {
     background: linear-gradient(90deg, #f4dca8 52.21%, #f5be66 55.6%, #ff8038 58.94%, #ff38bb 62.55%);
@@ -30,94 +31,139 @@
     font-weight: 400;
     line-height: normal;
   }
-  .works-box-container {
+
+  .boxes-section {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    overflow: hidden;
+    height: 167px;
+  }
+  .box-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    height: 100px;
     border: 1px solid white;
+  }
+
+  .arrow {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+
+  .icon {
+    margin-left: 10px;
+  }
+
+  .box.dim,
+  .arrow.dim {
+    opacity: 0; /* Fully transparent when dimmed */
+    transition: opacity 1s ease-in-out; /* Transition effect for fading */
+  }
+
+  .box:not(.dim),
+  .arrow:not(.dim) {
+    opacity: 1; /* Fully visible when not dimmed */
   }
 </style>
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
-        {%- for block in section.blocks -%}
-          {%- case block.type -%}
-            {%- when 'heading' -%}
-              <h2
-                class="works-header rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {%- if block.settings.heading == blank -%}
-                  How ecom<span class="works-gradient">OS</span> works.
-                {%- else -%}
-                  {{ block.settings.heading }}
-                {%- endif -%}
-              </h2>
-            {%- when 'caption' -%}
-              <p
-                class="rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {{ block.settings.caption | escape }}
-              </p>
-            {%- when 'text' -%}
-              <div
-                class="rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {{ block.settings.text }}
-              </div>
-            {%- when 'button' -%}
-              <div
-                class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {%- if block.settings.button_label != blank -%}
-                  <a
-                    {% if block.settings.button_link == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.button_link }}"
-                    {% endif %}
-                    class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                  >
-                    {{- block.settings.button_label | escape -}}
-                  </a>
-                {%- endif -%}
-                {%- if block.settings.button_label_2 != blank -%}
-                  <a
-                    {% if block.settings.button_link_2 == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.button_link_2 }}"
-                    {% endif %}
-                    class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
-                  >
-                    {{- block.settings.button_label_2 | escape -}}
-                  </a>
-                {%- endif -%}
-              </div>
-          {%- endcase -%}
-        {%- endfor -%}
+        <h2
+          class="works-header rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {{ block.shopify_attributes }}
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+            style="--animation-order: {{ forloop.index }};"
+          {% endif %}
+        >
+          {%- if section.settings.heading == blank -%}
+            How ecom<span class="works-gradient">OS</span> works.
+          {%- else -%}
+            {{ block.settings.heading }}
+          {%- endif -%}
+        </h2>
       </div>
     </div>
-    <div class="works-box-container page-width"><h1>Box animation here...</h1></div>
+    <div class="works-box-container boxes-section page-width">
+      {% for block in section.blocks %}
+        <div class="box-wrapper">
+          <div class="box {% unless forloop.first %}dim{% endunless %}">
+            {{ block.settings.box_header }}
+            <i class="icon">{{ block.settings.box_icon }}</i>
+          </div>
+          {% unless forloop.last %}
+            <div class="arrow dim">→</div>
+          {% endunless %}
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const boxes = document.querySelectorAll('.box-wrapper');
+    let currentBoxIndex = 0;
+    let animateArrow = false; // flag to determine whether to animate the box or arrow
+
+    function dimAllElements() {
+      boxes.forEach((box, index) => {
+        if (index !== 0) {
+          // Skip the first box
+          box.querySelector('.box').classList.add('dim');
+        }
+        if (box.querySelector('.arrow')) {
+          box.querySelector('.arrow').classList.add('dim');
+        }
+      });
+    }
+
+    function startAnimation() {
+      const interval = setInterval(() => {
+        const currentBox = boxes[currentBoxIndex];
+        if (!animateArrow) {
+          currentBox.querySelector('.box').classList.remove('dim');
+          animateArrow = true; // next cycle will animate the arrow
+        } else if (currentBox.querySelector('.arrow')) {
+          currentBox.querySelector('.arrow').classList.remove('dim');
+          animateArrow = false; // next cycle will animate the box
+          currentBoxIndex++; // move to the next box
+        } else {
+          animateArrow = false; // next cycle will animate the box
+          currentBoxIndex++; // move to the next box if there's no arrow
+        }
+
+        if (currentBoxIndex >= boxes.length) {
+          clearInterval(interval);
+          setTimeout(() => {
+            dimAllElements();
+            currentBoxIndex = 0; // reset the index
+            animateArrow = false; // reset the flag
+            startAnimation();
+          }, 1000);
+        }
+      }, 1000);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startAnimation();
+          observer.disconnect(); // disconnect observer after starting the first loop to avoid re-triggering
+        }
+      });
+    });
+
+    observer.observe(document.querySelector('.boxes-section'));
+  });
+</script>
 
 {% schema %}
 {
@@ -128,6 +174,11 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header"
+    },
     {
       "type": "select",
       "id": "desktop_content_position",
@@ -347,22 +398,30 @@
           "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_2.label"
         }
       ]
+    },
+    {
+      "type": "box",
+      "name": "Box",
+      "settings": [
+        {
+          "type": "text",
+          "id": "box_header",
+          "label": "Box Header",
+          "default": "Text"
+        },
+        {
+          "type": "text",
+          "id": "box_icon",
+          "label": "Box Icon",
+          "default": "Icon"
+        }
+      ]
     }
   ],
   "presets": [
     {
       "name": "EcomOS Works",
-      "blocks": [
-        {
-          "type": "heading"
-        },
-        {
-          "type": "text"
-        },
-        {
-          "type": "button"
-        }
-      ]
+      "blocks": []
     }
   ]
 }
