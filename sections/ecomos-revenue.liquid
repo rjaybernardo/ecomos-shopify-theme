@@ -41,6 +41,20 @@
     background: #ffefcd;
     color: #111111;
   }
+  .revenue-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3%;
+    margin: 50px auto 40px;
+    max-width: 1300px;
+    border: 1px solid white;
+  }
+  .revenue-card {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 </style>
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
@@ -125,8 +139,24 @@
         {%- endfor -%}
       </div>
     </div>
-    <div class="revenue-card-container page-width">
-      <h1>Card container...</h1>
+    <div class="page-width">
+      <div class="revenue-card-container">
+        <div class="revenue-card">
+          <div class="revenue-card-icon">Icon</div>
+          <div class="revenue-card-header">header</div>
+          <div class="revenue-card-text">paragraph text</div>
+        </div>
+        <div class="revenue-card">
+          <div class="revenue-card-icon">Icon</div>
+          <div class="revenue-card-header">header</div>
+          <div class="revenue-card-text">paragraph text</div>
+        </div>
+        <div class="revenue-card">
+          <div class="revenue-card-icon">Icon</div>
+          <div class="revenue-card-header">header</div>
+          <div class="revenue-card-icons">icon1 icon2</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
