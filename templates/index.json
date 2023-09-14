@@ -112,7 +112,9 @@
           "type": "revenue-card",
           "settings": {
             "header": "Certified CRO Specialists",
-            "text": ""
+            "text": "",
+            "agency": "shopify:\/\/shop_images\/agency-badge_1.png",
+            "expert": "shopify:\/\/shop_images\/expert-badge_1.png"
           }
         }
       },
