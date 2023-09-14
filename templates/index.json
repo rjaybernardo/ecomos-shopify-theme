@@ -155,6 +155,8 @@
         "template--20870255509822__f51199d1-8c56-4bab-91b2-d6a4c9517e59-text-1"
       ],
       "settings": {
+        "heading": "Pricing",
+        "text": "Choose a plan that’s right for you.",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "inverse",
@@ -216,18 +218,67 @@
     "22e78442-d625-44af-8b4c-f0d12aebd3e8": {
       "type": "ecomos-works",
       "blocks": {
-        "template--20870255509822__22e78442-d625-44af-8b4c-f0d12aebd3e8-heading-1": {
-          "type": "heading",
+        "ca6d52b0-2dc0-4639-8968-1b72f5eb1889": {
+          "type": "box",
           "settings": {
-            "heading": "",
-            "heading_size": "h1"
+            "box_header": "Proposal Review",
+            "box_icon": "Icon"
+          }
+        },
+        "a8dd13f3-fb2b-42ae-8680-5d60fbcddc03": {
+          "type": "box",
+          "settings": {
+            "box_header": "Project Kickoff & Onboarding",
+            "box_icon": "Icon"
+          }
+        },
+        "de1ded86-1552-45f4-bbd5-0fd81a68f1c6": {
+          "type": "box",
+          "settings": {
+            "box_header": "Research",
+            "box_icon": "Icon"
+          }
+        },
+        "85a4c7f4-ce9e-47ac-84fa-b4cbd11356df": {
+          "type": "box",
+          "settings": {
+            "box_header": "OS System Build",
+            "box_icon": "Icon"
+          }
+        },
+        "c4339fee-2493-45b7-bedd-65cbf92126a3": {
+          "type": "box",
+          "settings": {
+            "box_header": "OS Revision Cycle",
+            "box_icon": "Icon"
+          }
+        },
+        "c53e5d6d-9ea6-40c3-a2cb-11f2a508d0dd": {
+          "type": "box",
+          "settings": {
+            "box_header": "Revisions Implemented",
+            "box_icon": "Icon"
+          }
+        },
+        "a5623423-8c51-495e-a0d3-9cc946e88e6f": {
+          "type": "box",
+          "settings": {
+            "box_header": "Delivery + 30 Recap",
+            "box_icon": "Icon"
           }
         }
       },
       "block_order": [
-        "template--20870255509822__22e78442-d625-44af-8b4c-f0d12aebd3e8-heading-1"
+        "ca6d52b0-2dc0-4639-8968-1b72f5eb1889",
+        "a8dd13f3-fb2b-42ae-8680-5d60fbcddc03",
+        "de1ded86-1552-45f4-bbd5-0fd81a68f1c6",
+        "85a4c7f4-ce9e-47ac-84fa-b4cbd11356df",
+        "c4339fee-2493-45b7-bedd-65cbf92126a3",
+        "c53e5d6d-9ea6-40c3-a2cb-11f2a508d0dd",
+        "a5623423-8c51-495e-a0d3-9cc946e88e6f"
       ],
       "settings": {
+        "header": "",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "accent-1",

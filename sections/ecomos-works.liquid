@@ -49,8 +49,16 @@
     justify-content: center;
     border-radius: 5px;
     border: 1px solid white;
-    height: auto;
-    width: 100%;
+    max-width: 120px;
+    aspect-ratio: 1/1;
+  }
+  .box p {
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.352px;
   }
 
   .arrow {
@@ -97,7 +105,7 @@
       {% for block in section.blocks %}
         <div class="box-wrapper">
           <div class="box {% unless forloop.first %}dim{% endunless %}">
-            {{ block.settings.box_header }}
+            <p>{{ block.settings.box_header | upcase }}</p>
             <i class="icon">{{ block.settings.box_icon }}</i>
           </div>
           {% unless forloop.last %}
