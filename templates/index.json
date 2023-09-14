@@ -88,7 +88,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 80,
-        "padding_bottom": 100
+        "padding_bottom": 0
       }
     },
     "60fde35e-3da5-4dec-86b1-c4ecc46e29a1": {
@@ -145,7 +145,7 @@
             "paragraph": "A full ecomOS designed landing page.",
             "price": "$4,995",
             "price_caption": "One-time payment",
-            "button_label": "Get Started",
+            "button_label": "Get Started!",
             "button_link": ""
           }
         },
@@ -167,7 +167,8 @@
             "header": "Book a call",
             "text": "Learn more about how ecomOS works and how it can help your brand.",
             "link_text": "Book a call",
-            "link": ""
+            "link": "",
+            "lottie_filename": "book1.json"
           }
         },
         "60e3deff-d816-4798-9403-47a9380245b5": {
@@ -190,7 +191,8 @@
             "header": "Refer a friend & earn",
             "text": "Earn a 20% referral commission from referring other brands to ecomOS.",
             "link_text": "Refer now",
-            "link": ""
+            "link": "",
+            "lottie_filename": "book2.json"
           }
         }
       },
@@ -269,49 +271,49 @@
         "ca6d52b0-2dc0-4639-8968-1b72f5eb1889": {
           "type": "box",
           "settings": {
-            "box_header": "Proposal Review",
+            "box_header": "<p>Proposal Review<\/p>",
             "box_icon": "Icon"
           }
         },
         "a8dd13f3-fb2b-42ae-8680-5d60fbcddc03": {
           "type": "box",
           "settings": {
-            "box_header": "Project Kickoff & Onboarding",
+            "box_header": "<p>Project Kickoff & Onboarding<\/p>",
             "box_icon": "Icon"
           }
         },
         "de1ded86-1552-45f4-bbd5-0fd81a68f1c6": {
           "type": "box",
           "settings": {
-            "box_header": "Research",
+            "box_header": "<p>Research<\/p>",
             "box_icon": "Icon"
           }
         },
         "85a4c7f4-ce9e-47ac-84fa-b4cbd11356df": {
           "type": "box",
           "settings": {
-            "box_header": "OS System Build",
+            "box_header": "<p>OS System Build<\/p>",
             "box_icon": "Icon"
           }
         },
         "c4339fee-2493-45b7-bedd-65cbf92126a3": {
           "type": "box",
           "settings": {
-            "box_header": "OS Revision Cycle",
+            "box_header": "<p>OS Revision Cycle<\/p>",
             "box_icon": "Icon"
           }
         },
         "c53e5d6d-9ea6-40c3-a2cb-11f2a508d0dd": {
           "type": "box",
           "settings": {
-            "box_header": "Revisions Implemented",
+            "box_header": "<p>Revisions Implemented<\/p>",
             "box_icon": "Icon"
           }
         },
         "a5623423-8c51-495e-a0d3-9cc946e88e6f": {
           "type": "box",
           "settings": {
-            "box_header": "Delivery + 30 Recap",
+            "box_header": "<p>Delivery + 30 day Recap<\/p>",
             "box_icon": "Icon"
           }
         }
