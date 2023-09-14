@@ -136,23 +136,68 @@
     "f51199d1-8c56-4bab-91b2-d6a4c9517e59": {
       "type": "ecomos-pricing",
       "blocks": {
-        "template--20870255509822__f51199d1-8c56-4bab-91b2-d6a4c9517e59-heading-1": {
-          "type": "heading",
+        "d05ea6cd-3bce-4db3-a73d-89e2da1965e5": {
+          "type": "landing_page",
           "settings": {
-            "heading": "Pricing",
-            "heading_size": "h1"
+            "header": "Single Landing Page",
+            "paragraph": "A full ecomOS designed landing page.",
+            "price": "$4,995",
+            "price_caption": "One-time payment",
+            "button_label": "Get Started",
+            "button_link": ""
           }
         },
-        "template--20870255509822__f51199d1-8c56-4bab-91b2-d6a4c9517e59-text-1": {
-          "type": "text",
+        "b925191f-a2b3-46dc-b4be-9058ad03442d": {
+          "type": "landing_page",
           "settings": {
-            "text": "<p>Choose a plan that’s right for you.<\/p>"
+            "header": "Landing Page w\/ CRO testing System",
+            "paragraph": "A full ecomOS designed landing page with 2 additonial CRO test & implementation guide.",
+            "price": "$7,995",
+            "price_caption": "One-time payment.  (options monthly engagement)",
+            "button_label": "Get Started!",
+            "button_link": ""
+          }
+        },
+        "862ecd91-6fc4-4f54-8e95-799f6b8c3e11": {
+          "type": "book_refer",
+          "settings": {
+            "header": "Book a call",
+            "text": "Learn more about how ecomOS works and how it can help your brand.",
+            "link_text": "Book a call",
+            "link": ""
+          }
+        },
+        "60e3deff-d816-4798-9403-47a9380245b5": {
+          "type": "whats_included",
+          "settings": {
+            "header": "What's included:",
+            "bullet_text": "<ul><li>Qualitative research<\/li><li>14 day delivery<\/li><li>2 revision cycles<\/li><li>Dedicated Slack channel<\/li><li>Sections built for shopify<\/li><li>Single split test included<\/li><li>CRO recommended tests<\/li><li>Ad creative recommendation<\/li><\/ul>"
+          }
+        },
+        "646a5ff1-12e8-40c3-a8f5-8b0aebadb9e4": {
+          "type": "whats_included",
+          "settings": {
+            "header": "What's included:",
+            "bullet_text": "<p><strong>Two requests at a time<\/strong><\/p><ul><li>Qualitative research<\/li><li>14 day delivery<\/li><li>2 revision cycles<\/li><li>Dedicated Slack channel<\/li><li>Sections built for shopify<\/li><li>Single split test included<\/li><li>CRO recommended tests<\/li><li>Ad creative recommendation<\/li><\/ul>"
+          }
+        },
+        "91689632-3807-4a95-bebe-dad2a74b04c0": {
+          "type": "book_refer",
+          "settings": {
+            "header": "Refer a friend & earn",
+            "text": "Earn a 20% referral commission from referring other brands to ecomOS.",
+            "link_text": "Refer now",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "template--20870255509822__f51199d1-8c56-4bab-91b2-d6a4c9517e59-heading-1",
-        "template--20870255509822__f51199d1-8c56-4bab-91b2-d6a4c9517e59-text-1"
+        "d05ea6cd-3bce-4db3-a73d-89e2da1965e5",
+        "b925191f-a2b3-46dc-b4be-9058ad03442d",
+        "862ecd91-6fc4-4f54-8e95-799f6b8c3e11",
+        "60e3deff-d816-4798-9403-47a9380245b5",
+        "646a5ff1-12e8-40c3-a8f5-8b0aebadb9e4",
+        "91689632-3807-4a95-bebe-dad2a74b04c0"
       ],
       "settings": {
         "heading": "Pricing",

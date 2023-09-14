@@ -24,7 +24,7 @@
   }
   .revenue-text {
     max-width: 560px;
-    margin: 0 auto;
+    margin: 10px auto 0 !important;
   }
   .revenue-gradient {
     background: linear-gradient(90deg, #f4dca8 59.9%, #f5be66 66.33%, #ff8038 72.66%, #ff38bb 79.5%);
@@ -47,13 +47,33 @@
     gap: 3%;
     margin: 50px auto 40px;
     max-width: 1300px;
-    border: 1px solid white;
   }
   .revenue-card {
-    border: 1px solid green;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 15px;
+    border: 1px solid rgba(51, 51, 51, 0.5);
+    background: rgba(36, 36, 36, 0.5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px 40px;
+  }
+  .revenue-card-header {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px !important;
+  }
+  .revenue-card-text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  .revenue-card-icons {
+    display: flex;
+    justify-content: space-between;
   }
 </style>
 
@@ -61,101 +81,73 @@
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
-        {%- for block in section.blocks -%}
-          {%- case block.type -%}
-            {%- when 'heading' -%}
-              <h2
-                class="revenue-header rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {{ block.settings.heading }}
-              </h2>
-            {%- when 'caption' -%}
-              <p
-                class=" rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {{ block.settings.caption | escape }}
-              </p>
-            {%- when 'text' -%}
-              <div
-                class="revenue-text rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {%- if block.settings.text == blank -%}
-                  We can help you drop your new customer CPA by 30% or more. How? By using a high converting
-                  <span class="revenue-gradient">landing page</span>.
-                {%- else -%}
-                  {{ block.settings.text }}
-                {%- endif -%}
-              </div>
-            {%- when 'button' -%}
-              <div
-                class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {%- if block.settings.button_label != blank -%}
-                  <a
-                    {% if block.settings.button_link == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.button_link }}"
-                    {% endif %}
-                    class="button revenue-button"
-                  >
-                    {{- block.settings.button_label | escape -}}
-                  </a>
-                {%- endif -%}
-                {%- if block.settings.button_label_2 != blank -%}
-                  <a
-                    {% if block.settings.button_link_2 == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.button_link_2 }}"
-                    {% endif %}
-                    class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
-                  >
-                    {{- block.settings.button_label_2 | escape -}}
-                  </a>
-                {%- endif -%}
-              </div>
-          {%- endcase -%}
-        {%- endfor -%}
+        <h2
+          class="revenue-header rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {{ block.shopify_attributes }}
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+            style="--animation-order: {{ forloop.index }};"
+          {% endif %}
+        >
+          {{ section.settings.heading }}
+        </h2>
+
+        <div
+          class="revenue-text rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {{ block.shopify_attributes }}
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+            style="--animation-order: {{ forloop.index }};"
+          {% endif %}
+        >
+          {%- if section.settings.text == blank -%}
+            We can help you drop your new customer CPA by 30% or more. How? By using a high converting
+            <span class="revenue-gradient">landing page</span>.
+          {%- else -%}
+            {{ section.settings.text }}
+          {%- endif -%}
+        </div>
       </div>
     </div>
     <div class="page-width">
       <div class="revenue-card-container">
-        <div class="revenue-card">
-          <div class="revenue-card-icon">Icon</div>
-          <div class="revenue-card-header">header</div>
-          <div class="revenue-card-text">paragraph text</div>
-        </div>
-        <div class="revenue-card">
-          <div class="revenue-card-icon">Icon</div>
-          <div class="revenue-card-header">header</div>
-          <div class="revenue-card-text">paragraph text</div>
-        </div>
-        <div class="revenue-card">
-          <div class="revenue-card-icon">Icon</div>
-          <div class="revenue-card-header">header</div>
-          <div class="revenue-card-icons">icon1 icon2</div>
-        </div>
+        {% for block in section.blocks %}
+          <div class="revenue-card">
+            <div class="revenue-card-icon">
+              {% if block.settings.icon %}
+                <img
+                  src="{{ block.settings.icon | image_url }}"
+                  alt="{{ block.settings.header }}"
+                  height="78"
+                  width="78"
+                  loading="lazy"
+                >
+              {% endif %}
+            </div>
+            <div class="revenue-card-header">{{ block.settings.header }}</div>
+            <div class="revenue-card-text">{{ block.settings.text }}</div>
+            <div class="revenue-card-icons">
+              {% if block.settings.agency %}
+                <img
+                  src="{{ block.settings.agency | image_url }}"
+                  alt="agency logo"
+                  height="71"
+                  width="157"
+                  loading="lazy"
+                >
+              {% endif %}
+              {% if block.settings.expert %}
+                <img
+                  src="{{ block.settings.expert | image_url }}"
+                  alt="expert logo"
+                  height="71"
+                  width="157"
+                  loading="lazy"
+                >
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -170,6 +162,17 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Pricing Section Header",
+      "default": "Maximize revenue for every website visitor."
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Pricing Section Text"
+    },
     {
       "type": "select",
       "id": "desktop_content_position",
@@ -250,143 +253,35 @@
   ],
   "blocks": [
     {
-      "type": "heading",
-      "name": "t:sections.rich-text.blocks.heading.name",
-      "limit": 3,
+      "type": "revenue-card",
+      "name": "Revenue Card",
       "settings": [
         {
-          "type": "inline_richtext",
-          "id": "heading",
-          "default": "Talk about your brand",
-          "label": "t:sections.rich-text.blocks.heading.settings.heading.label"
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Card Icon"
         },
-        {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            },
-            {
-              "value": "hxl",
-              "label": "t:sections.all.heading_size.options__4.label"
-            }
-          ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
-        }
-      ]
-    },
-    {
-      "type": "caption",
-      "name": "t:sections.rich-text.blocks.caption.name",
-      "limit": 3,
-      "settings": [
         {
           "type": "text",
-          "id": "caption",
-          "default": "Add a tagline",
-          "label": "t:sections.rich-text.blocks.caption.settings.text.label"
+          "id": "header",
+          "label": "Card Header",
+          "default": "header"
         },
         {
-          "type": "select",
-          "id": "text_style",
-          "options": [
-            {
-              "value": "subtitle",
-              "label": "t:sections.rich-text.blocks.caption.settings.text_style.options__1.label"
-            },
-            {
-              "value": "caption-with-letter-spacing",
-              "label": "t:sections.rich-text.blocks.caption.settings.text_style.options__2.label"
-            }
-          ],
-          "default": "caption-with-letter-spacing",
-          "label": "t:sections.rich-text.blocks.caption.settings.text_style.label"
-        },
-        {
-          "type": "select",
-          "id": "text_size",
-          "options": [
-            {
-              "value": "small",
-              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__1.label"
-            },
-            {
-              "value": "medium",
-              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__2.label"
-            },
-            {
-              "value": "large",
-              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__3.label"
-            }
-          ],
-          "default": "medium",
-          "label": "t:sections.rich-text.blocks.caption.settings.caption_size.label"
-        }
-      ]
-    },
-    {
-      "type": "text",
-      "name": "t:sections.rich-text.blocks.text.name",
-      "limit": 3,
-      "settings": [
-        {
-          "type": "richtext",
+          "type": "textarea",
           "id": "text",
-          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
-          "label": "t:sections.rich-text.blocks.text.settings.text.label"
-        }
-      ]
-    },
-    {
-      "type": "button",
-      "name": "t:sections.rich-text.blocks.buttons.name",
-      "limit": 2,
-      "settings": [
-        {
-          "type": "text",
-          "id": "button_label",
-          "default": "Button label",
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_1.label",
-          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_1.info"
+          "label": "Card Text",
+          "default": "paragraph text"
         },
         {
-          "type": "url",
-          "id": "button_link",
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_link_1.label"
+          "type": "image_picker",
+          "id": "agency",
+          "label": "Agency logo"
         },
         {
-          "type": "checkbox",
-          "id": "button_style_secondary",
-          "default": false,
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_1.label"
-        },
-        {
-          "type": "text",
-          "id": "button_label_2",
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_2.label",
-          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_2.info"
-        },
-        {
-          "type": "url",
-          "id": "button_link_2",
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_link_2.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary_2",
-          "default": false,
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_2.label"
+          "type": "image_picker",
+          "id": "expert",
+          "label": "Expert logo"
         }
       ]
     }
@@ -394,17 +289,7 @@
   "presets": [
     {
       "name": "EcomOs Revenue",
-      "blocks": [
-        {
-          "type": "heading"
-        },
-        {
-          "type": "text"
-        },
-        {
-          "type": "button"
-        }
-      ]
+      "blocks": []
     }
   ]
 }
