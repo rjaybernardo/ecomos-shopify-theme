@@ -51,6 +51,7 @@
     border: 1px solid white;
     max-width: 120px;
     aspect-ratio: 1/1;
+    position: relative;
   }
   .box p {
     text-align: center;
@@ -60,14 +61,19 @@
     line-height: 150%;
     letter-spacing: -0.352px;
   }
-
+  .works-icon {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(50%) translateX(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #f4dca8;
+  }
   .arrow {
     font-size: 24px;
     margin: 0 10px;
-  }
-
-  .icon {
-    margin-left: 10px;
   }
 
   .box.dim,
@@ -106,7 +112,7 @@
         <div class="box-wrapper">
           <div class="box {% unless forloop.first %}dim{% endunless %}">
             <p>{{ block.settings.box_header | upcase }}</p>
-            <i class="icon">{{ block.settings.box_icon }}</i>
+            <i class="works-icon">{{ block.settings.box_icon }}</i>
           </div>
           {% unless forloop.last %}
             <div class="arrow dim">→</div>
