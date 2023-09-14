@@ -72,9 +72,10 @@
     font-weight: 400;
     line-height: 140%;
   }
-  .revenue-card-icons {
-    display: flex;
-    justify-content: space-between;
+  .revenue-card-icon {
+    height: 78px;
+    width: 78px;
+    margin-bottom: 20px;
   }
 </style>
 
@@ -115,15 +116,14 @@
         {% for block in section.blocks %}
           <div class="revenue-card">
             <div class="revenue-card-icon">
-              {% if block.settings.icon %}
-                <img
-                  src="{{ block.settings.icon | image_url }}"
-                  alt="{{ block.settings.header }}"
-                  height="78"
-                  width="78"
-                  loading="lazy"
-                >
-              {% endif %}
+              <lottie-player
+                autoplay
+                loop
+                mode="normal"
+                src="{{ "flow" | append: forloop.index | append: ".json" | asset_url }}"
+                style="width: 78px"
+              >
+              </lottie-player>
             </div>
             <div class="revenue-card-header">{{ block.settings.header }}</div>
             <div class="revenue-card-text">{{ block.settings.text }}</div>
@@ -153,6 +153,32 @@
     </div>
   </div>
 </div>
+
+<script>
+  var animation1 = lottie.loadAnimation({
+    container: document.getElementById('lottie-animation1'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '{{ 'lottie-pencil.json' | asset_url }}'
+  });
+
+  var animation2 = lottie.loadAnimation({
+    container: document.getElementById('lottie-animation2'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '{{ 'lottie-diamond.json' | asset_url }}'
+  });
+
+  var animation3 = lottie.loadAnimation({
+    container: document.getElementById('lottie-animation3'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '{{ 'lottie-chart.json' | asset_url }}'
+  });
+</script>
 
 {% schema %}
 {

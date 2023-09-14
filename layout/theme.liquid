@@ -27,6 +27,7 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+    <script src="{{ 'lottie-player.js' | asset_url }}" defer="defer"></script>
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
@@ -335,6 +336,5 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    <script src="{{ 'lottie.min.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>
