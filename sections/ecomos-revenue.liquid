@@ -77,6 +77,14 @@
     width: 78px;
     margin-bottom: 20px;
   }
+  .revenue-card-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+  }
+  .revenue-card-icons img {
+    width: 100%;
+  }
 </style>
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
@@ -153,32 +161,6 @@
     </div>
   </div>
 </div>
-
-<script>
-  var animation1 = lottie.loadAnimation({
-    container: document.getElementById('lottie-animation1'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: '{{ 'lottie-pencil.json' | asset_url }}'
-  });
-
-  var animation2 = lottie.loadAnimation({
-    container: document.getElementById('lottie-animation2'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: '{{ 'lottie-diamond.json' | asset_url }}'
-  });
-
-  var animation3 = lottie.loadAnimation({
-    container: document.getElementById('lottie-animation3'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: '{{ 'lottie-chart.json' | asset_url }}'
-  });
-</script>
 
 {% schema %}
 {
