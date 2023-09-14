@@ -94,37 +94,36 @@
     "60fde35e-3da5-4dec-86b1-c4ecc46e29a1": {
       "type": "ecomos-revenue",
       "blocks": {
-        "44bb9d3e-5918-4356-99b5-e81de099b586": {
-          "type": "button",
+        "56f192ab-8c3e-48fd-88fa-a0689bab6153": {
+          "type": "revenue-card",
           "settings": {
-            "button_label": "OUR FRAMEWORKS",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "header": "Great Writing",
+            "text": "We write in a way that makes people want to buy."
           }
         },
-        "template--20870255509822__60fde35e-3da5-4dec-86b1-c4ecc46e29a1-heading-1": {
-          "type": "heading",
+        "10e6766c-a42a-4f34-99fa-a0b17c0e3071": {
+          "type": "revenue-card",
           "settings": {
-            "heading": "Maximize revenue for every website visitor.",
-            "heading_size": "h1"
+            "header": "Incredible Design",
+            "text": "We use design as a method of hacking the buyer's mind."
           }
         },
-        "template--20870255509822__60fde35e-3da5-4dec-86b1-c4ecc46e29a1-text-1": {
-          "type": "text",
+        "a70c99dc-3793-4b94-92a6-cc59c82042ed": {
+          "type": "revenue-card",
           "settings": {
+            "header": "Certified CRO Specialists",
             "text": ""
           }
         }
       },
       "block_order": [
-        "44bb9d3e-5918-4356-99b5-e81de099b586",
-        "template--20870255509822__60fde35e-3da5-4dec-86b1-c4ecc46e29a1-heading-1",
-        "template--20870255509822__60fde35e-3da5-4dec-86b1-c4ecc46e29a1-text-1"
+        "56f192ab-8c3e-48fd-88fa-a0689bab6153",
+        "10e6766c-a42a-4f34-99fa-a0b17c0e3071",
+        "a70c99dc-3793-4b94-92a6-cc59c82042ed"
       ],
       "settings": {
+        "heading": "Maximize revenue for every website visitor.",
+        "text": "",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "accent-1",
@@ -139,6 +138,7 @@
         "d05ea6cd-3bce-4db3-a73d-89e2da1965e5": {
           "type": "landing_page",
           "settings": {
+            "highlight": "Most Popular",
             "header": "Single Landing Page",
             "paragraph": "A full ecomOS designed landing page.",
             "price": "$4,995",
@@ -150,6 +150,7 @@
         "b925191f-a2b3-46dc-b4be-9058ad03442d": {
           "type": "landing_page",
           "settings": {
+            "highlight": "Best for big brands with 15k of daily visits",
             "header": "Landing Page w\/ CRO testing System",
             "paragraph": "A full ecomOS designed landing page with 2 additonial CRO test & implementation guide.",
             "price": "$7,995",
