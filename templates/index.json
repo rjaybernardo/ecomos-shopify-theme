@@ -46,7 +46,7 @@
             "link_label": "Get Started",
             "link": "shopify:\/\/collections\/all",
             "button_label": "Get Started!",
-            "button_link": "shopify:\/\/collections\/all"
+            "button_link": ""
           }
         },
         "template--20870255509822__2eb92d52-4c96-4c77-80ee-6d7cbb60b1cd-column-2": {
@@ -57,7 +57,7 @@
             "text": "",
             "link_label": "",
             "link": "",
-            "button_label": "Click Me",
+            "button_label": "",
             "button_link": ""
           }
         }
@@ -88,7 +88,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 80,
-        "padding_bottom": 0
+        "padding_bottom": 60
       }
     },
     "60fde35e-3da5-4dec-86b1-c4ecc46e29a1": {
