@@ -48,8 +48,9 @@
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    border: 1px solid white;
-    min-width: 120px;
+    border: 0.1px solid white;
+    /* width: min(100%, 150px); */
+    width: 100%;
     aspect-ratio: 1/1;
     position: relative;
   }
@@ -61,6 +62,9 @@
     line-height: 150%;
     letter-spacing: -0.352px;
   }
+  .last-box {
+    width: 85%;
+  }
   .works-icon {
     position: absolute;
     bottom: 0;
@@ -69,7 +73,6 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background-color: #f4dca8;
   }
   .arrow {
     font-size: 24px;
@@ -78,7 +81,7 @@
 
   .box.dim,
   .arrow.dim {
-    opacity: 0; /* Fully transparent when dimmed */
+    opacity: 0.1; /* Fully transparent when dimmed */
     transition: opacity 1s ease-in-out; /* Transition effect for fading */
   }
 
@@ -110,12 +113,13 @@
     <div class="works-box-container boxes-section page-width">
       {% for block in section.blocks %}
         <div class="box-wrapper">
-          <div class="box {% unless forloop.first %}dim{% endunless %}">
+          <div class="box {% unless forloop.first %}dim{% endunless %} {% if forloop.last %}last-box{% endif %}">
             <p>{{ block.settings.box_header | upcase }}</p>
-            <i class="works-icon">{{ block.settings.box_icon }}</i>
+            {% assign icon_name = 'box-icon' | append: forloop.index | append: '.png' %}
+            <img src="{{ icon_name | asset_url }}" alt="Icon" class="works-icon" width="33" height="33" loading="lazy">
           </div>
           {% unless forloop.last %}
-            <div class="arrow dim">→</div>
+            <div class="arrow dim" style="color:red;margin-left:-1px;margin-right:-1px">→</div>
           {% endunless %}
         </div>
       {% endfor %}
