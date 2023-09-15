@@ -68,6 +68,9 @@
     line-height: 140%;
     color: #fff;
   }
+  .starter-lottie-container {
+    padding-top: 20px;
+  }
 </style>
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
@@ -152,12 +155,11 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="multicolumn-card content-container">
+            <div class="starter-lottie-container multicolumn-card content-container">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
-
                 <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
                   <div
                     class="media media--transparent media--{{ section.settings.image_ratio }}"
@@ -171,7 +173,6 @@
                         loop
                         mode="normal"
                         src="{{ "mobile.json" | asset_url }}"
-                        style="width: 580px;height:fit-content"
                       >
                       </lottie-player>
                     </div>
