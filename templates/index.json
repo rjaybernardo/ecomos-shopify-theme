@@ -242,10 +242,10 @@
             "text": ""
           }
         },
-        "67bc8f3d-80ce-4515-966c-3c3cec22ffd7": {
-          "type": "text",
+        "df0687cc-467c-403c-b9de-0505affd9336": {
+          "type": "pricing",
           "settings": {
-            "text": "<p>$999<\/p>"
+            "pricing_text": "$999"
           }
         }
       },
@@ -253,7 +253,7 @@
         "template--20870255509822__4605c618-075d-4801-a64c-d94d59fa7eb0-button-1",
         "template--20870255509822__4605c618-075d-4801-a64c-d94d59fa7eb0-heading-1",
         "template--20870255509822__4605c618-075d-4801-a64c-d94d59fa7eb0-text-1",
-        "67bc8f3d-80ce-4515-966c-3c3cec22ffd7"
+        "df0687cc-467c-403c-b9de-0505affd9336"
       ],
       "settings": {
         "desktop_content_position": "center",
