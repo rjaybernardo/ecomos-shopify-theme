@@ -20,6 +20,24 @@
   }
 {%- endstyle -%}
 <style>
+  .banner-section{
+    position:relative
+  }
+  img.ellipse1{
+    position:absolute;
+    width:40px;
+    height:40px;
+    top:20%;
+    left:15%;
+  }
+  img.ellipse2{
+    position:absolute;
+     width:100px;
+    height:100px;
+    z-index:-1;
+    top:60%;
+    right:20%;
+  }
   .banner-rich-text h2 {
     font-size: 62px;
     line-height: normal;
@@ -70,7 +88,23 @@
 </style>
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
-  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  <div class="banner-section rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+    <img 
+    src="{{ "ellipse1.png" | asset_url }}" 
+    alt="ellipse" 
+    class="ellipse1"
+    width="40"
+    height="40"
+    loading="lazy"
+ >
+ <img 
+ src="{{ "ellipse2.png" | asset_url }}" 
+ alt="ellipse" 
+ class="ellipse2"
+ width="100"
+ height="100"
+ loading="lazy"
+>
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="banner-rich-text rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
