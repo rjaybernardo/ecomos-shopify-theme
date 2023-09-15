@@ -15,6 +15,15 @@
   }
 {%- endstyle -%}
 <style>
+  .faqs-section{
+    position:relative;
+  }
+  img.ellipse4{
+    position:absolute;
+    top:50%;
+    right:-10%;
+    z-index:-1;
+  }
   .faqs-header {
     font-size: 62px;
     font-style: normal;
@@ -37,8 +46,17 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="collapsible-content collapsible-{{ section.settings.layout }}-layout isolate{% if section.settings.layout == 'section' %} page-width{% elsif section.settings.layout == 'none' %} content-container content-container--full-width{% endif %}">
-    <div class="collapsible-content__wrapper section-{{ section.id }}-padding{% if section.settings.layout == 'section' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}">
-      <div class="{% if section.settings.image == blank %}collapsible-content-wrapper-narrow{% else %}page-width{% endif %}">
+    <div class=" collapsible-content__wrapper section-{{ section.id }}-padding{% if section.settings.layout == 'section' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}">
+    
+      <div class="faqs-section {% if section.settings.image == blank %}collapsible-content-wrapper-narrow{% else %}page-width{% endif %}">
+          <img 
+      src="{{ "ellipse4.png" | asset_url }}" 
+      alt="ellipse" 
+      class="ellipse4"
+      width="28"
+      height="28"
+      loading="lazy"
+     >
         <div
           class="collapsible-content__header{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           style="text-align: {{ section.settings.heading_alignment }};"
