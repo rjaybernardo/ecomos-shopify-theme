@@ -340,12 +340,84 @@
     "035c41db-7ed7-400d-9fd6-353677679294": {
       "type": "ecomos-profit",
       "blocks": {
-       
+        "3f7d811d-b39a-4347-914a-a4e0d014c323": {
+          "type": "icon-text",
+          "settings": {
+            "icon_text": "Conversion Optimization"
+          }
+        },
+        "bfd350b3-eac3-4959-9601-b5fc29b386ea": {
+          "type": "icon-text",
+          "settings": {
+            "icon_text": "Direct Response Copy"
+          }
+        },
+        "37603fce-ff3d-4964-be81-eb4385100f7c": {
+          "type": "icon-text",
+          "settings": {
+            "icon_text": "Fast Load Times"
+          }
+        },
+        "57411d0e-5c5b-48c0-8680-c3b449983520": {
+          "type": "icon-text",
+          "settings": {
+            "icon_text": "High Converting Layout"
+          }
+        },
+        "51f88f7b-a4de-42ad-a063-8daefe3bee3a": {
+          "type": "icon-text",
+          "settings": {
+            "icon_text": "Responsive Design"
+          }
+        },
+        "b7243b5f-e4dd-40e9-9b43-fce04f0c44a3": {
+          "type": "icon-text",
+          "settings": {
+            "icon_text": "Branded Feel"
+          }
+        },
+        "b34baa4e-59d3-4a2f-a8fc-3e9c0d4e5aba": {
+          "type": "icon-text",
+          "settings": {
+            "icon_text": "AOV Boosting Methods"
+          }
+        },
+        "8bdb8274-8679-4b9c-b5b9-f25c7271c3c4": {
+          "type": "icon-text",
+          "settings": {
+            "icon_text": "Ad-Specific Funnel"
+          }
+        },
+        "4633b761-5819-4156-860e-4330750d1a38": {
+          "type": "icon-text",
+          "settings": {
+            "icon_text": "Social Proof"
+          }
+        },
+        "fe65c8a5-d95e-4b6f-be4b-98867c519ac7": {
+          "type": "icon-text",
+          "settings": {
+            "icon_text": "Strong Call-to-Actions"
+          }
+        }
       },
       "block_order": [
-       
+        "3f7d811d-b39a-4347-914a-a4e0d014c323",
+        "bfd350b3-eac3-4959-9601-b5fc29b386ea",
+        "37603fce-ff3d-4964-be81-eb4385100f7c",
+        "57411d0e-5c5b-48c0-8680-c3b449983520",
+        "51f88f7b-a4de-42ad-a063-8daefe3bee3a",
+        "b7243b5f-e4dd-40e9-9b43-fce04f0c44a3",
+        "b34baa4e-59d3-4a2f-a8fc-3e9c0d4e5aba",
+        "8bdb8274-8679-4b9c-b5b9-f25c7271c3c4",
+        "4633b761-5819-4156-860e-4330750d1a38",
+        "fe65c8a5-d95e-4b6f-be4b-98867c519ac7"
       ],
       "settings": {
+        "heading": "Want more profit?",
+        "heading_size": "h1",
+        "text": "",
+        "profit_user_image": "shopify:\/\/shop_images\/Group_482036.png",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "inverse",

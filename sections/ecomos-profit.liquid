@@ -39,10 +39,20 @@
     line-height: 140%;
   }
   .profit-icon-text-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Default to the largest column count (4) */
-    gap: 10px;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center; /* Distribute items evenly */
+}
+
+
+
+/* Adjust for 4-column layout for the next 4 items */
+.icon-text-wrapper:nth-child(4),
+.icon-text-wrapper:nth-child(5),
+.icon-text-wrapper:nth-child(6),
+.icon-text-wrapper:nth-child(7) {
+    min-width: calc(25% - 10px); /* Adjust for 4 columns */
+}
 
   .icon-text-wrapper {
     display: flex;
@@ -53,7 +63,10 @@
     background: rgba(30, 30, 30, 0.5);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     padding: 10px 15px;
-    width: fit-content;
+
+    flex-grow: 0;
+    min-width: calc(33.333% - 10px); /* Assuming a 10px gap */
+    margin: 0 5px 10px; /* Half of 10px for left and right */
   }
   .icon-text-wrapper p {
     margin: 0;
