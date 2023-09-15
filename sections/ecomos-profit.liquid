@@ -79,6 +79,7 @@ margin-right:10%
   }
   .profit-users-container {
     position: relative; /* Ensure the container has a relative position */
+ 
   }
 
   .profit-users-container::before {
@@ -102,6 +103,9 @@ margin-right:10%
     text-align: center;
     padding: 220px 0 40px;
 
+        background-image: url('{{ 'bg-profit.png' | asset_url }}');
+    background-repeat: no-repeat;
+    background-size:contain;
   }
   .profit-user-quote {
     font-size: 20px;

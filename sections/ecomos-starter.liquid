@@ -71,6 +71,9 @@
   .starter-lottie-container {
     padding-top: 20px;
   }
+  .lottie-container{
+  height:fit-content !important;
+  }
 </style>
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
@@ -167,7 +170,7 @@
                       style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
                     {% endif %}
                   >
-                    <div>
+                  <div class="lottie-container">
                       <lottie-player
                         autoplay
                         loop
