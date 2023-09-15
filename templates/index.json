@@ -340,35 +340,10 @@
     "035c41db-7ed7-400d-9fd6-353677679294": {
       "type": "ecomos-profit",
       "blocks": {
-        "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Want more profit?",
-            "heading_size": "h1"
-          }
-        },
-        "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-text-1": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        },
-        "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
+       
       },
       "block_order": [
-        "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-heading-1",
-        "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-text-1",
-        "template--20870255509822__035c41db-7ed7-400d-9fd6-353677679294-button-1"
+       
       ],
       "settings": {
         "desktop_content_position": "center",
