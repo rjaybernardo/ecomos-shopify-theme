@@ -16,23 +16,12 @@
   .banner-section{
     position:relative
   }
-  img.ellipse1{
-    position:absolute;
-    width:40px;
-    height:40px;
-    top:20%;
-    left:10%;
+  img.ellipse1,  img.ellipse2{
+ display:none;
   }
-  img.ellipse2{
-    position:absolute;
-     width:100px;
-    height:100px;
-    z-index:-1;
-    bottom:-22%;
-    right:20%;
-  }
+
   .banner-rich-text h2 {
-    font-size: 62px;
+    font-size: 32px;
     line-height: normal;
     margin-bottom: 17px;
   }
@@ -50,7 +39,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 62px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -80,9 +69,26 @@
     -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0002, #0004);
   }
   @media(min-width:750px){
+  span.banner-os ,.banner-rich-text h2 {
+  font-size: 62px;
+  }
   .swiper {
   width: 80%;
- 
+  }
+  img.ellipse1{
+  position:absolute;
+  width:40px;
+  height:40px;
+  top:20%;
+  left:10%;
+}
+img.ellipse2{
+  position:absolute;
+   width:100px;
+  height:100px;
+  z-index:-1;
+  bottom:-22%;
+  right:20%;
 }
   }
 </style>
