@@ -19,10 +19,7 @@
     position:relative;
   }
   img.ellipse4{
-    position:absolute;
-    top:50%;
-    right:-10%;
-    z-index:-1;
+  display: none;
   }
   .faqs-header {
     font-size: 62px;
@@ -41,6 +38,14 @@
     background: #fff;
     box-shadow: 0px 4px 0px 0px #f5be66;
     padding-left: 24px;
+  }
+  @media(min-width:990px){
+  img.ellipse4{
+  display: block;
+    position:absolute;
+    top:50%;
+    right:-10%;
+    z-index:-1;
   }
 </style>
 

@@ -133,14 +133,26 @@ margin-right:10%
     font-weight: 400;
     line-height: 140%;
   }
+  .profit-desktop{
+    display:none;
+  }
+  .profit-mobile{
+    display: none;
+  }
+
   @media(min-width:750px){
   .profit-users {
-
-  padding: 220px 0 40px;
-  background-image: url('{{ 'bg-profit.png' | asset_url }}');
-  background-repeat: no-repeat;
-  background-size:contain;
-}
+      padding: 220px 0 40px;
+      background-image: url('{{ 'bg-profit.png' | asset_url }}');
+      background-repeat: no-repeat;
+      background-size:contain;
+    }
+    .profit-desktop{
+      display: flex;
+    }
+    .profit-mobile{
+      display:none;
+    }
   }
 </style>
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
@@ -168,7 +180,8 @@ margin-right:10%
         </div>
       </div>
     </div>
-    <div class="profit-icon-text-container page-width">
+
+    <div class="profit-desktop profit-icon-text-container page-width">
       {%- for block in section.blocks -%}
         {% case block.type %}
           {%- when 'icon-text' -%}
@@ -179,6 +192,20 @@ margin-right:10%
         {% endcase %}
       {%- endfor -%}
     </div>
+    <div class="profit-mobile profit-icon-text-container page-width swiper-container">
+      <div class="swiper-wrapper">
+          {%- for block in section.blocks -%}
+              {% case block.type %}
+                  {%- when 'icon-text' -%}
+                  <div class="icon-text-wrapper rte {{ block.settings.text_style }} swiper-slide" {{ block.shopify_attributes }}>
+                      {%- render 'icon-check' -%}
+                      <p class="">{{ block.settings.icon_text }}</p>
+                  </div>
+              {% endcase %}
+          {%- endfor -%}
+      </div>
+    </div>
+
     <div class="profit-users-container">
       <div class="profit-users page-width">
         <div class="profit-user-image">
@@ -187,7 +214,7 @@ margin-right:10%
               src="{{ section.settings.profit_user_image | image_url }}"
               alt="Custom Image"
               class="responsive-image"
-              width="140"
+              width="auto"
               height="140"
               loading="lazy">
 
