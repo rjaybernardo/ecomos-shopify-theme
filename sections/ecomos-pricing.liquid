@@ -27,15 +27,21 @@
     line-height: 140%;
     margin: 10px 0 50px !important;
   }
+  .pricing-grid-item.first-block {
+    display: flex;
+    width: 97%;
+  }
   .pricing-grid {
     background: #000;
     gap: 2px;
     color: #000;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     border: 1px solid black;
     padding: 0 !important;
+    justify-items: center;
   }
+
   .pricing-grid-item {
     background: #fff;
     color: black;
@@ -142,6 +148,25 @@
     line-height: 20px;
     text-decoration-line: underline;
   }
+
+.pricing-grid-item {
+display: none;
+}
+
+@media (min-width: 750px) {
+.pricing-grid-item.first-block {
+width: 100%;
+}
+.pricing-grid-item {
+    display: grid;
+width: 100%;
+
+}
+.pricing-grid {
+grid-template-columns: repeat(3, 1fr);
+}
+}
+
 </style>
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
@@ -170,11 +195,11 @@
         </div>
       </div>
     </div>
-    <div class="pricing-grid page-width">
+    <div class=" pricing-grid page-width">
       {% for block in section.blocks %}
         {% case block.type %}
           {% when 'landing_page' %}
-            <div class="pricing-grid-item landing-page">
+            <div class="pricing-grid-item landing-page  {% if forloop.first %}first-block{% endif %}" data-block-id="{{ block.id }}">
               <div class="highlight">
                 <p>{{ block.settings.highlight | upcase }}</p>
               </div>
@@ -201,7 +226,7 @@
             </div>
 
           {% when 'book_refer' %}
-            <div class="pricing-grid-item book-refer">
+            <div class="pricing-grid-item book-refer  {% if forloop.first %}first-block{% endif %}" data-block-id="{{ block.id }}">
               <div class="book-refer-image">
                 {% if forloop.index == 3 or forloop.index == 6 %}
                   <lottie-player
@@ -222,13 +247,14 @@
             </div>
 
           {% when 'whats_included' %}
-            <div class="pricing-grid-item whats-included">
+            <div class="pricing-grid-item whats-included  {% if forloop.first %}first-block{% endif %}" data-block-id="{{ block.id }}">
               <h2>{{ block.settings.header }}</h2>
               <div>{{ block.settings.bullet_text }}</div>
             </div>
         {% endcase %}
       {% endfor %}
     </div>
+   
   </div>
 </div>
 
