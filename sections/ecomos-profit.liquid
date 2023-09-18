@@ -71,11 +71,14 @@ margin-right:10%
     padding: 10px 15px;
 
     flex-grow: 0;
-    width: min(auto,30%); /* Assuming a 10px gap */
+    width:auto !important;
     margin: 0 5px 10px; /* Half of 10px for left and right */
+    height: fit-content;
   }
   .icon-text-wrapper p {
     margin: 0;
+    text-wrap: nowrap;
+    width: fit-content;
   }
   .profit-users-container {
     position: relative; /* Ensure the container has a relative position */
@@ -101,7 +104,7 @@ margin-right:10%
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 220px 0 40px;
+    padding: 100px 0 40px;
 
     background-image:none;
    
@@ -111,7 +114,7 @@ margin-right:10%
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
-    max-width: 600px;
+    width:min(90%, 600px);
     margin: 0 auto 74px;
   }
   .profit-user-quote span {
@@ -119,6 +122,7 @@ margin-right:10%
     font-style: normal;
     font-weight: 800;
     line-height: 140%;
+
   }
   | .user-name {
     font-size: 26px;
@@ -137,9 +141,14 @@ margin-right:10%
     display:none;
   }
   .profit-mobile{
-    display: none;
+    display: flex;
+    overflow: hidden;
+    width: 90%;
   }
-
+.profit-icon-check{
+width: 24px;
+height: 24px;
+}
   @media(min-width:750px){
   .profit-users {
       padding: 220px 0 40px;
@@ -153,6 +162,14 @@ margin-right:10%
     .profit-mobile{
       display:none;
     }
+    .icon-text-wrapper {
+      flex-grow: 0;
+      width: min(auto,30%); /* Assuming a 10px gap */
+      margin: 0 5px 10px; /* Half of 10px for left and right */
+      height: fit-content;
+    }
+
+  
   }
 </style>
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
@@ -193,12 +210,12 @@ margin-right:10%
       {%- endfor -%}
     </div>
     <div class="profit-mobile profit-icon-text-container page-width swiper-container">
-      <div class="swiper-wrapper">
+      <div class=" swiper-wrapper">
           {%- for block in section.blocks -%}
               {% case block.type %}
                   {%- when 'icon-text' -%}
                   <div class="icon-text-wrapper rte {{ block.settings.text_style }} swiper-slide" {{ block.shopify_attributes }}>
-                      {%- render 'icon-check' -%}
+                    <div class="profit-icon-check">  {%- render 'icon-check' -%}</div>
                       <p class="">{{ block.settings.icon_text }}</p>
                   </div>
               {% endcase %}
@@ -214,7 +231,7 @@ margin-right:10%
               src="{{ section.settings.profit_user_image | image_url }}"
               alt="Custom Image"
               class="responsive-image"
-              width="auto"
+              width="140"
               height="140"
               loading="lazy">
 
@@ -236,7 +253,19 @@ margin-right:10%
     </div>
   </div>
 </div>
-
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var swiper = new Swiper('.profit-mobile', {
+      slidesPerView: auto, // display 4 slides at a time
+      spaceBetween: 10, // adjust this value for spacing between slides if needed
+      loop: true, // enable continuous loop mode
+      autoplay: {
+        delay: 2500, // slide every 2.5 seconds
+        disableOnInteraction: false,
+      }
+    });
+  });
+</script>
 {% schema %}
   {
     "name": "EcomOS Profit",
