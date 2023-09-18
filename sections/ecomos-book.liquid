@@ -3,7 +3,7 @@
 
 {%- style -%}
   .split-background {
-          background: linear-gradient(to bottom, {{ section.settings.top_background_color }} 60%, {{ section.settings.bottom_background_color }} 40%);
+          background: linear-gradient(to bottom, {{ section.settings.top_background_color }} 70%, {{ section.settings.bottom_background_color }} 30%);
       }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -11,6 +11,9 @@
   }
 
   @media screen and (min-width: 750px) {
+  .split-background {
+          background: linear-gradient(to bottom, {{ section.settings.top_background_color }} 60%, {{ section.settings.bottom_background_color }} 40%);
+      }
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -29,7 +32,7 @@ position:relative
     height:55px;
   }
   .book-title {
-    font-size: 62px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -37,6 +40,14 @@ position:relative
   }
   .book-card {
     background: none !important;
+  }
+  .book-image-wrapper{
+  padding-top: 0;
+  }
+  @media(min-width:750px){
+  .book-title {
+    font-size: 62px;
+  }
   }
 </style>
 {%- liquid
@@ -112,7 +123,7 @@ position:relative
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
-                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
+                <div class="book-image-wrapper multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
                   <div
                     class=media media--transparent media--{{ section.settings.image_ratio }}"
                     {% if section.settings.image_ratio == 'adapt' %}
