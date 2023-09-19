@@ -39,9 +39,8 @@
   }
   .starter-desktop {
     display: none;
-   
   }
-  .starter-mobile{
+  .starter-mobile {
     display: flex;
     gap: 30px;
     max-width: 90%;
@@ -64,8 +63,8 @@
     height: auto;
     object-fit: cover;
   }
-  .starter-grid-content-container{
-  flex-direction: column-reverse;
+  .starter-grid-content-container {
+    flex-direction: column-reverse;
   }
   .starter-header {
     font-size: 26px;
@@ -80,31 +79,31 @@
   .starter-lottie-container {
     padding-top: 20px;
   }
-  .lottie-container{
-  height:fit-content !important;
+  .lottie-container {
+    height: fit-content !important;
   }
-  .starter-button{
+  .starter-button {
     width: 100%;
   }
-@media(min-width:990px){
-.starter-grid-content-container{
-  flex-direction: row;
-}
-.starter-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    max-width: 610px;
-    margin: 0 auto;
-    margin-bottom: 60px;
+  @media (min-width: 990px) {
+    .starter-grid-content-container {
+      flex-direction: row;
+    }
+    .starter-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      max-width: 610px;
+      margin: 0 auto;
+      margin-bottom: 60px;
+    }
+    .starter-mobile {
+      display: none;
+    }
+    .starter-button {
+      width: auto;
+    }
   }
-  .starter-mobile{
-    display:none;
-  }
-  .starter-button{
-  width: auto;
-}
-}
 </style>
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
@@ -156,23 +155,24 @@
       {% endfor %}
     </div>
 
-  <div class="starter-mobile swiper-container center starter-grid">
-    <div class="swiper-wrapper">
-    {% for i in (1..8) %}
-      {% assign logo_id = 'grid_logo_' | append: i %}
-      {% if section.settings[logo_id] %}
-        <div class="swiper-slide starter-grid-logo">
-          <img
-            src="{{ section.settings[logo_id] | image_url }}"
-            alt="Logo {{ i }}"
-            height="auto"
-            width="auto"
-            loading="lazy">
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
+    <div class="starter-mobile swiper-container center starter-grid">
+      <div class="swiper-wrapper">
+        {% for i in (1..8) %}
+          {% assign logo_id = 'grid_logo_' | append: i %}
+          {% if section.settings[logo_id] %}
+            <div class="swiper-slide starter-grid-logo">
+              <img
+                src="{{ section.settings[logo_id] | image_url }}"
+                alt="Logo {{ i }}"
+                height="auto"
+                width="auto"
+                loading="lazy"
+              >
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
 
     <slider-component class="slider-mobile-gutter">
       <ul
@@ -219,7 +219,7 @@
                       style="padding-bottom:100%;"
                     {% endif %}
                   >
-                  <div class="lottie-container">
+                    <div class="lottie-container">
                       <lottie-player
                         autoplay
                         loop
@@ -288,15 +288,15 @@
   </div>
 </div>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.swiper-container', {
       slidesPerView: 4, // display 4 slides at a time
       spaceBetween: 10, // adjust this value for spacing between slides if needed
       loop: true, // enable continuous loop mode
       autoplay: {
-        delay: 2500, // slide every 2.5 seconds
+        delay: 400, // slide every 2.5 seconds
         disableOnInteraction: false,
-      }
+      },
     });
   });
 </script>

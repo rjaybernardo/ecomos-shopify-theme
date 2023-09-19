@@ -14,169 +14,169 @@
   }
 {%- endstyle -%}
 <style>
-  .profit-header {
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  .profit-text {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    max-width: 600px;
-    margin: 0 auto !important;
-  }
-  .profit-gradient {
-    background: linear-gradient(90deg, #f4dca8 20.36%, #f5be66 26.39%, #ff8038 32.32%, #ff38bb 38.73%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-  }
-  .profit-icon-text-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center; /* Distribute items evenly */
-    margin-top:30px;
-}
-
-.icon-text-wrapper:nth-child(1){
-margin-left:10%
-}
-.icon-text-wrapper:nth-child(3){
-margin-right:10%
-}
-
-/* Adjust for 4-column layout for the next 4 items */
-.icon-text-wrapper:nth-child(4),
-.icon-text-wrapper:nth-child(5),
-.icon-text-wrapper:nth-child(6),
-.icon-text-wrapper:nth-child(7) {
-    width: min(auto,25%); /* Adjust for 4 columns */
-}
-
-  .icon-text-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    border-radius: 8px;
-    border: 1px solid rgba(51, 51, 51, 0.5);
-    background: rgba(30, 30, 30, 0.5);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    padding: 10px 15px;
-
-    flex-grow: 0;
-    width:auto !important;
-    margin: 0 5px 10px; /* Half of 10px for left and right */
-    height: fit-content;
-  }
-  .icon-text-wrapper p {
-    margin: 0;
-    text-wrap: nowrap;
-    width: fit-content;
-  }
-  .profit-users-container {
-    position: relative; /* Ensure the container has a relative position */
- 
-  }
-
-  .profit-users-container::before {
-    content: ""; /* Pseudo-elements require content, even if it's an empty string */
-    background-image: url('{{ 'bg-map.png' | asset_url }}');
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.05;
-    position: absolute; /* Cover the entire parent element */
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1; /* Place the background below the content of .profit-users-container */
-  }
-
-  .profit-users {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 100px 0 40px;
-
-    background-image:none;
-   
-  }
-  .profit-user-quote {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    width:min(90%, 600px);
-    margin: 0 auto 74px;
-  }
-  .profit-user-quote span {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 140%;
-  }
-  .profit-user-name {
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    margin: 0 auto ;
-  }
-  .user-live {
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-  }
-  .profit-desktop{
-    display:none;
-  }
-  .profit-mobile{
-    display: flex;
-    overflow: hidden;
-    width: 90%;
-  }
-.profit-icon-check{
-width: 24px;
-height: 24px;
-}
-  @media(min-width:750px){
-  .profit-header {
-  font-size: 62px;
-  }
-  .profit-users {
-      padding: 220px 0 40px;
-      background-image: url('{{ 'bg-profit.png' | asset_url }}');
-      background-repeat: no-repeat;
-      background-size:contain;
+    .profit-header {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
     }
-    .profit-user-name {
-
-    margin: 0 auto 100px;
-  }
-    .profit-desktop{
+    .profit-text {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      max-width: 600px;
+      margin: 0 auto !important;
+    }
+    .profit-gradient {
+      background: linear-gradient(90deg, #f4dca8 20.36%, #f5be66 26.39%, #ff8038 32.32%, #ff38bb 38.73%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+    }
+    .profit-icon-text-container {
       display: flex;
-    }
-    .profit-mobile{
-      display:none;
-    }
+      flex-wrap: wrap;
+      justify-content:center; /* Distribute items evenly */
+      margin-top:30px;
+  }
+
+  .icon-text-wrapper:nth-child(1){
+  margin-left:10%
+  }
+  .icon-text-wrapper:nth-child(3){
+  margin-right:10%
+  }
+
+  /* Adjust for 4-column layout for the next 4 items */
+  .icon-text-wrapper:nth-child(4),
+  .icon-text-wrapper:nth-child(5),
+  .icon-text-wrapper:nth-child(6),
+  .icon-text-wrapper:nth-child(7) {
+      width: min(auto,25%); /* Adjust for 4 columns */
+  }
+
     .icon-text-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 8px;
+      border: 1px solid rgba(51, 51, 51, 0.5);
+      background: rgba(30, 30, 30, 0.5);
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+      padding: 10px 15px;
+
       flex-grow: 0;
-      width: min(auto,30%); /* Assuming a 10px gap */
+      width:auto !important;
       margin: 0 5px 10px; /* Half of 10px for left and right */
       height: fit-content;
     }
+    .icon-text-wrapper p {
+      margin: 0;
+      text-wrap: nowrap;
+      width: fit-content;
+    }
+    .profit-users-container {
+      position: relative; /* Ensure the container has a relative position */
 
-  
+    }
+
+    .profit-users-container::before {
+      content: ""; /* Pseudo-elements require content, even if it's an empty string */
+      background-image: url('{{ 'bg-map.png' | asset_url }}');
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.05;
+      position: absolute; /* Cover the entire parent element */
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1; /* Place the background below the content of .profit-users-container */
+    }
+
+    .profit-users {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 0 40px;
+
+      background-image:none;
+
+    }
+    .profit-user-quote {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      width:min(90%, 600px);
+      margin: 0 auto 74px;
+    }
+    .profit-user-quote span {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 140%;
+    }
+    .profit-user-name {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      margin: 0 auto ;
+    }
+    .user-live {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+    }
+    .profit-desktop{
+      display:none;
+    }
+    .profit-mobile{
+      display: flex;
+      overflow: hidden;
+      width: 90%;
+    }
+  .profit-icon-check{
+  width: 24px;
+  height: 24px;
   }
+    @media(min-width:750px){
+    .profit-header {
+    font-size: 62px;
+    }
+    .profit-users {
+        padding: 220px 0 40px;
+        background-image: url('{{ 'bg-profit.png' | asset_url }}');
+        background-repeat: no-repeat;
+        background-size:contain;
+      }
+      .profit-user-name {
+
+      margin: 0 auto 100px;
+    }
+      .profit-desktop{
+        display: flex;
+      }
+      .profit-mobile{
+        display:none;
+      }
+      .icon-text-wrapper {
+        flex-grow: 0;
+        width: min(auto,30%); /* Assuming a 10px gap */
+        margin: 0 5px 10px; /* Half of 10px for left and right */
+        height: fit-content;
+      }
+
+
+    }
 </style>
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
@@ -185,18 +185,24 @@ height: 24px;
         <h2
           class="profit-header rich-text__heading rte inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ block.shopify_attributes }}
-          {% if settings.animations_reveal_on_scroll %}data-cascadestyle="--animation-order: {{ forloop.index }};"{% endif %}>
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascadestyle="--animation-order: {{ forloop.index }};"
+          {% endif %}
+        >
           {{ section.settings.heading }}
         </h2>
 
         <div
           class="profit-text rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ block.shopify_attributes }}
-          {% if settings.animations_reveal_on_scroll %}data-cascadestyle="--animation-order: {{ forloop.index }};"{% endif %}>
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascadestyle="--animation-order: {{ forloop.index }};"
+          {% endif %}
+        >
           {%- if section.settings.text == blank -%}
             Our pages
-            <span class="profit-gradient">help you sell</span>. They look good and sound great. More people
-            will talk about it.
+            <span class="profit-gradient">help you sell</span>. They look good and sound great. More people will talk
+            about it.
           {%- else -%}
             {{ section.settings.text }}
           {%- endif -%}
@@ -208,24 +214,27 @@ height: 24px;
       {%- for block in section.blocks -%}
         {% case block.type %}
           {%- when 'icon-text' -%}
-          <div class="icon-text-wrapper rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-            {%- render 'icon-check' -%}
-            <p class="">{{ block.settings.icon_text }}</p>
-          </div>
+            <div class="icon-text-wrapper rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+              {%- render 'icon-check' -%}
+              <p class="">{{ block.settings.icon_text }}</p>
+            </div>
         {% endcase %}
       {%- endfor -%}
     </div>
     <div class="profit-mobile profit-icon-text-container page-width swiper-container">
       <div class=" swiper-wrapper">
-          {%- for block in section.blocks -%}
-              {% case block.type %}
-                  {%- when 'icon-text' -%}
-                  <div class="icon-text-wrapper rte {{ block.settings.text_style }} swiper-slide" {{ block.shopify_attributes }}>
-                    <div class="profit-icon-check">  {%- render 'icon-check' -%}</div>
-                      <p class="">{{ block.settings.icon_text }}</p>
-                  </div>
-              {% endcase %}
-          {%- endfor -%}
+        {%- for block in section.blocks -%}
+          {% case block.type %}
+            {%- when 'icon-text' -%}
+              <div
+                class="icon-text-wrapper rte {{ block.settings.text_style }} swiper-slide"
+                {{ block.shopify_attributes }}
+              >
+                <div class="profit-icon-check">{%- render 'icon-check' -%}</div>
+                <p class="">{{ block.settings.icon_text }}</p>
+              </div>
+          {% endcase %}
+        {%- endfor -%}
       </div>
     </div>
 
@@ -239,169 +248,169 @@ height: 24px;
               class="responsive-image"
               width="140"
               height="140"
-              loading="lazy">
-
+              loading="lazy"
+            >
           {% endif %}
         </div>
         <div class="profit-user-quote">
           “I would have never tested light vs. dark,
           <span>great fucking job</span>
-          with that idea. Definitely excited to
-          start working on the next one. Once I saw how comprehensive this was, it definitely got me excited.”
+          with that idea. Definitely excited to start working on the next one. Once I saw how comprehensive this was, it
+          definitely got me excited.”
         </div>
-        <p class="profit-user-name" >Anthony Mink</p>
+        <p class="profit-user-name">Anthony Mink</p>
         <p class="user-live">Live Bearded</p>
       </div>
     </div>
   </div>
 </div>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var swiper = new Swiper('.profit-mobile', {
-      slidesPerView: auto, // display 4 slides at a time
-      spaceBetween: 10, // adjust this value for spacing between slides if needed
-      loop: true, // enable continuous loop mode
-      autoplay: {
-        delay: 2500, // slide every 2.5 seconds
-        disableOnInteraction: false,
-      }
-    });
-  });
-</script>
+<script></script>
 {% schema %}
-  {
-    "name": "EcomOS Profit",
-    "tag": "section",
-    "class": "section",
-    "disabled_on": {
-      "groups": ["header", "footer"]
+{
+  "name": "EcomOS Profit",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Want more profit?",
+      "label": "Profit Section Header"
     },
-    "settings": [
-      {
-        "type": "inline_richtext",
-        "id": "heading",
-        "default": "Want more profit?",
-        "label": "Profit Section Header"
-      },
-      {
-        "type": "select",
-        "id": "heading_size",
-        "options": [
-          {
-            "value": "h2",
-            "label": "t:sections.all.heading_size.options__1.label"
-          }, {
-            "value": "h1",
-            "label": "t:sections.all.heading_size.options__2.label"
-          }, {
-            "value": "h0",
-            "label": "t:sections.all.heading_size.options__3.label"
-          }, {
-            "value": "hxl",
-            "label": "t:sections.all.heading_size.options__4.label"
-          }
-        ],
-        "default": "h1",
-        "label": "t:sections.all.heading_size.label"
-      },
-      {
-        "type": "richtext",
-        "id": "text",
-        "label": "Section Subheader"
-      },
-      {
-        "id": "profit_user_image",
-        "type": "image_picker",
-        "label": "User Image"
-      }, 
-      {
-        "type": "select",
-        "id": "desktop_content_position",
-        "options": [
-          {
-            "value": "left",
-            "label": "t:sections.rich-text.settings.desktop_content_position.options__1.label"
-          }, {
-            "value": "center",
-            "label": "t:sections.rich-text.settings.desktop_content_position.options__2.label"
-          }, {
-            "value": "right",
-            "label": "t:sections.rich-text.settings.desktop_content_position.options__3.label"
-          }
-        ],
-        "default": "center",
-        "label": "t:sections.rich-text.settings.desktop_content_position.label",
-        "info": "t:sections.rich-text.settings.desktop_content_position.info"
-      }, 
-      {
-        "type": "select",
-        "id": "content_alignment",
-        "options": [
-          {
-            "value": "left",
-            "label": "t:sections.rich-text.settings.content_alignment.options__1.label"
-          }, {
-            "value": "center",
-            "label": "t:sections.rich-text.settings.content_alignment.options__2.label"
-          }, {
-            "value": "right",
-            "label": "t:sections.rich-text.settings.content_alignment.options__3.label"
-          }
-        ],
-        "default": "center",
-        "label": "t:sections.rich-text.settings.content_alignment.label"
-      }, {
-        "type": "color_scheme",
-        "id": "color_scheme",
-        "label": "t:sections.all.colors.label",
-        "default": "background-1"
-      }, {
-        "type": "checkbox",
-        "id": "full_width",
-        "default": true,
-        "label": "t:sections.rich-text.settings.full_width.label"
-      }, {
-        "type": "header",
-        "content": "t:sections.all.padding.section_padding_heading"
-      }, {
-        "type": "range",
-        "id": "padding_top",
-        "min": 0,
-        "max": 100,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_top",
-        "default": 40
-      }, {
-        "type": "range",
-        "id": "padding_bottom",
-        "min": 0,
-        "max": 100,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_bottom",
-        "default": 52
-      }
-    ],
-    "blocks": [
-      {
-        "type": "icon-text",
-        "name": "Icon with Text",
-        "settings": [
-          {
-            "type": "text",
-            "id": "icon_text",
-            "default": "Lorem ipsum ",
-            "label": "Paragraph Text"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "EcomOS Profit",
-        "blocks": []
-      }
-    ]
-  }
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Section Subheader"
+    },
+    {
+      "id": "profit_user_image",
+      "type": "image_picker",
+      "label": "User Image"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.rich-text.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.rich-text.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.rich-text.settings.desktop_content_position.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.rich-text.settings.desktop_content_position.label",
+      "info": "t:sections.rich-text.settings.desktop_content_position.info"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.rich-text.settings.content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.rich-text.settings.content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.rich-text.settings.content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.rich-text.settings.content_alignment.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.rich-text.settings.full_width.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon-text",
+      "name": "Icon with Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon_text",
+          "default": "Lorem ipsum ",
+          "label": "Paragraph Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "EcomOS Profit",
+      "blocks": []
+    }
+  ]
+}
 {% endschema %}

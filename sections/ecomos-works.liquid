@@ -33,8 +33,9 @@
   }
 
   .boxes-section {
-    display: none;
-   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
   }
   .box-wrapper {
     display: flex;
@@ -87,17 +88,17 @@
   .arrow:not(.dim) {
     opacity: 1; /* Fully visible when not dimmed */
   }
-  @media(min-width:990px){
-  .works-header,
-  .works-gradient  {
-    font-size: 62px;
+  @media (min-width: 990px) {
+    .works-header,
+    .works-gradient {
+      font-size: 62px;
     }
-  .boxes-section {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  overflow: hidden;
-  height: 167px;
-}
+    .boxes-section {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      overflow: hidden;
+      height: 167px;
+    }
   }
 </style>
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
